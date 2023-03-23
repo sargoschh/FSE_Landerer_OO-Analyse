@@ -165,3 +165,211 @@ Indem sie das Design der Benutzeroberfläche visualisieren, helfen UI Mockups de
 In Bezug auf Use Cases können UI Mockups verwendet werden, um die Schritte zu visualisieren, die der Akteur ausführt, um das Ziel des Use Case zu erreichen. Durch die Kombination von Use Case-Beschreibungen und UI Mockups können Beteiligte ein umfassenderes Verständnis davon bekommen, wie das System funktionieren wird und wie es auf Benutzerinteraktionen reagieren wird.
 
 Insgesamt können UI Mockups bei der Anforderungsanalyse und dem Design von Systemen eine wertvolle Rolle spielen, da sie dazu beitragen, dass alle Beteiligten auf derselben Seite sind und ein gemeinsames Verständnis darüber haben, wie das System aussehen und funktionieren wird.
+
+### Dokumentation
+Eine gute Dokumentation von Anwendungsfällen sollte folgende Schritte umfassen:
+
+- Identifizieren der beteiligten Akteure: Definieren der verschiedenen Personen oder Systeme, die in einem Anwendungsfall involviert sind, sowie ihre Rollen und Verantwortlichkeiten.
+
+- Das Ziel des Anwendungsfalls beschreiben: Formulieren des Ziels, das mit dem Anwendungsfall erreicht werden soll. Dies sollte klar und präzise sein und sollte das Problem, das der Anwendungsfall löst, beschreiben.
+
+- Schrittweise Beschreibung des Ablaufs: Aufschreiben des Ablaufs des Anwendungsfalls schrittweise. Beginnend mit dem Ausgangspunkt wird jeder Schritt beschrieben, den der Akteur durchführt, bis das Ziel des Anwendungsfalls erreicht ist.
+
+- Beschreiben der möglichen Varianten: Identifizieren der möglichen Ausnahmefälle, unerwartete Ereignisse oder Fehler, die während des Ablaufs des Anwendungsfalls auftreten können. Beschreiben, wie das System damit umgehen sollte.
+
+- Beispiele hinzufügen: Konkrete Beispiele für jede Schrittbeschreibung angeben, um den Anwendungsfall zu veranschaulichen.
+
+- Verwenden von Diagrammen: Dokumentation ergänzen durch Diagramme, die den Anwendungsfall veranschaulichen. Dazu gehören beispielsweise Aktivitätsdiagramme oder Sequenzdiagramme.
+
+- Überprüfen der Dokumentation: Sicherstellen, dass die Dokumentation verständlich und vollständig ist. Überprüfen auf Richtigkeit und Aktualität.
+
+## Anforderungsanalyse mit User Stories und Epics
+
+### Grundlagen
+
+- User Stories: Eine User Story ist eine kurze, einfach formulierte Beschreibung einer Funktion oder Anforderung aus der Sicht des Benutzers. Sie folgt der Form "Als [Rolle] möchte ich [Funktion], damit ich [Ziel] erreichen kann". User Stories sollen möglichst unabhängig voneinander und klein sein, damit sie gut planbar und umsetzbar sind.
+
+- Epics: Ein Epic ist eine Sammlung von User Stories, die ein größeres, zusammenhängendes Ziel oder eine Funktion beschreiben. Ein Epic kann in kleinere, umsetzbare User Stories aufgeteilt werden, um eine schrittweise Umsetzung zu ermöglichen.
+
+- Priorisierung: User Stories und Epics sollten nach ihrer Wichtigkeit oder Dringlichkeit für das System priorisiert werden. Dies hilft dabei, sich auf die wichtigsten Funktionen und Anforderungen zu konzentrieren und die Entwicklung entsprechend zu planen.
+
+- Iteration: User Stories und Epics können in Iterationen umgesetzt werden, wobei jede Iteration eine bestimmte Anzahl von User Stories beinhaltet. Am Ende jeder Iteration wird eine lauffähige Version des Systems erstellt.
+
+- Kommunikation: Die Anforderungsanalyse mit User Stories und Epics setzt auf eine enge Zusammenarbeit zwischen den Entwicklern und dem Kunden oder Benutzer, um sicherzustellen, dass die Anforderungen verstanden und umgesetzt werden.
+
+- Kontinuierliche Verbesserung: Durch die schrittweise Umsetzung von User Stories und Epics und die enge Zusammenarbeit mit dem Kunden oder Benutzer können Verbesserungen und Änderungen an den Anforderungen jederzeit berücksichtigt werden.
+
+### Vorgehensweise
+
+- Identifikation der Stakeholder: Identifizieren Sie die verschiedenen Interessengruppen und Stakeholder, die an dem System beteiligt sind und die Anforderungen haben könnten.
+
+- Identifikation von Epics: Sammeln Sie Informationen über die Anforderungen und Ziele der Stakeholder und identifizieren Sie große, zusammenhängende Funktionen oder Ziele, die als Epics bezeichnet werden.
+
+- Aufteilung von Epics in User Stories: Teilen Sie jedes Epic in kleinere, umsetzbare User Stories auf, die ein bestimmtes Ziel oder eine bestimmte Funktion beschreiben.
+
+- Priorisierung von User Stories: Priorisieren Sie die User Stories nach ihrer Wichtigkeit oder Dringlichkeit für das System und seine Benutzer.
+
+- Planung von Iterationen: Planen Sie Iterationen, in denen eine bestimmte Anzahl von User Stories umgesetzt wird, um eine lauffähige Version des Systems zu erstellen.
+
+- Umsetzung von User Stories: Setzen Sie die ausgewählten User Stories in einer Iteration um, indem Sie sie in Entwicklungs- und Testaufgaben unterteilen.
+
+- Rückmeldung von Stakeholdern: Sammeln Sie Feedback von den Stakeholdern und Benutzern des Systems und integrieren Sie es in den Entwicklungsprozess.
+
+- Kontinuierliche Verbesserung: Nutzen Sie das Feedback und die Erfahrungen aus jeder Iteration, um die Anforderungen und die Umsetzung der User Stories zu verbessern.
+
+### Werkzeuge
+
+- Kollaborative Boards: Online-Tools wie Trello, Jira, oder Asana bieten eine Möglichkeit, Epics und User Stories in Boards zu organisieren und gemeinsam zu bearbeiten.
+
+- Mindmaps: Mindmapping-Tools wie MindMeister oder XMind können bei der Identifikation und Organisation von Epics und User Stories helfen.
+
+- User-Story-Workshops: Workshops sind eine Möglichkeit, um die Stakeholder zusammenzubringen und gemeinsam Epics und User Stories zu erstellen.
+
+- Personas: Personas sind fiktive Benutzerprofile, die helfen können, sich in die Perspektive der Benutzer hineinzuversetzen und ihre Bedürfnisse besser zu verstehen.
+
+- Story Maps: Story Maps sind eine visuelle Darstellung von User Stories, die helfen können, ihre Beziehungen und Abhängigkeiten zu anderen User Stories oder Epics zu verdeutlichen.
+
+- Prototyping-Tools: Prototyping-Tools wie Sketch oder Adobe XD können verwendet werden, um schnell einfache Prototypen von Benutzeroberflächen zu erstellen und Feedback von Stakeholdern zu sammeln.
+
+### Dokumentation
+
+- Epics: Beschreiben jedes Epics mit einem Titel und einer kurzen Beschreibung, die das Ziel oder die Funktion des Epic zusammenfasst. Gegebenenfalls zusätzliche Informationen hinzufügen, wie z.B. technische Anforderungen oder Abhängigkeiten zu anderen Epics oder User Stories.
+
+User Stories: Für jede User Story sollte eine Beschreibung erstellt werden, die das Ziel oder die Funktion der Story in einfachen, klaren Worten beschreibt. Ein Akzeptanzkriterium sollte definiert werden, das angibt, wie die Erfüllung der User Story gemessen werden kann. Die User Stories sollten auch mit ihren jeweiligen Epics verknüpft sein.
+
+Priorisierung: Dokumentieren der Priorisierung der Epics und User Stories und die Gründe dafür. Es ist auch nützlich, die Priorisierung im Verlauf des Projekts zu aktualisieren, um sicherzustellen, dass sie immer noch den aktuellen Bedürfnissen entspricht.
+
+Iterationsplanung: Dokumentieren des Plans für jede Iteration, einschließlich der Anzahl der geplanten User Stories und der geschätzten Zeit für die Umsetzung. Hinzufügen einer Liste der Prioritäten für jede Iteration.
+
+Feedback und Änderungen: Dokumentieren des Feedbacks und Änderungen, die während des Entwicklungsprozesses auftreten. Es ist wichtig, Feedback von den Stakeholdern und Benutzern des Systems zu sammeln und in den Entwicklungsprozess zu integrieren.
+
+Technische Dokumentation: Dokumentieren der technischen Anforderungen, wie z.B. Datenbankanforderungen, Schnittstellenanforderungen oder Systemarchitektur, die für die Umsetzung der User Stories erforderlich sind.
+
+
+## Klassendiagramm
+
+### Einsatzzweck
+Ein Klassendiagramm ist ein UML-Diagramm, das zur Visualisierung der Struktur eines Systems verwendet wird. Es stellt die Klassen und deren Beziehungen zueinander dar.
+
+Ein Klassendiagramm wird oft in der objektorientierten Programmierung verwendet, um den Entwurf von Klassen und deren Beziehungen im System zu beschreiben. Es zeigt die Eigenschaften und Methoden jeder Klasse, sowie deren Vererbungshierarchien und Beziehungen zu anderen Klassen.
+
+Das Klassendiagramm kann auch zur Kommunikation zwischen Entwicklern und Stakeholdern verwendet werden, um die Systemarchitektur und -struktur zu erklären. Es kann auch zur Identifizierung von Fehlern oder Verbesserungsmöglichkeiten in einem bestehenden System verwendet werden.
+
+Insgesamt kann das Klassendiagramm als ein wichtiger Entwurfsbaustein in der Softwareentwicklung angesehen werden, da es dazu beiträgt, die Klassen und ihre Beziehungen zu anderen Klassen im System klar zu definieren und zu kommunizieren.
+
+
+### Wesentliche Notationsformen
+- Klassenname: Der Name der Klasse wird in der obersten Teil des Kästchens geschrieben, das die Klasse repräsentiert.
+
+- Attribute: Die Attribute oder Eigenschaften der Klasse werden unter dem Klassennamen aufgelistet. Sie werden oft durch Namen und Datentypen dargestellt.
+
+- Methoden: Die Methoden der Klasse werden auch unter dem Klassennamen aufgelistet. Sie werden oft durch Namen und Parametertypen dargestellt.
+
+- Sichtbarkeit: Die Sichtbarkeit der Attribute und Methoden wird durch Symbole wie "+" (public), "-" (private) und "#" (protected) angezeigt.
+
+- Beziehungen: Die Beziehungen zwischen Klassen werden durch Pfeile dargestellt. Es gibt verschiedene Arten von Beziehungen wie Assoziation, Aggregation, Komposition und Vererbung.
+
+- Assoziation: Eine Assoziation zeigt eine Beziehung zwischen zwei Klassen an. Sie kann optional eine Multiplizität angeben, die angibt, wie viele Instanzen einer Klasse mit wie vielen Instanzen der anderen Klasse verbunden sind.
+
+![Assoziation](Bilder/Assoziation.jpg)
+
+- Aggregation: Eine Aggregation zeigt eine Beziehung zwischen zwei Klassen an, bei der eine Klasse eine Teilmenge der Instanzen der anderen Klasse enthält.
+
+![Aggregation](Bilder/Aggregation.jpg)
+
+- Komposition: Eine Komposition ist ähnlich wie eine Aggregation, aber die Teilklasse gehört zur ganzen Klasse und hat keine Existenz ohne sie.
+
+![Komposition](Bilder/Komposition.jpg)
+
+- Vererbung: Die Vererbungsbeziehung zeigt eine Beziehung zwischen einer Superklasse und einer oder mehreren Subklassen an. Die Pfeilspitze zeigt auf die Superklasse.
+
+![Vererbung](Bilder/Vererbung.jpg)
+
+![KlassendiagrammBeschreibung](Bilder/Klassendiagramm_Beschreibung.jpg)
+
+![KlassendiagrammBeschreibung2](Bilder/Klassendiagramm_Beschreibung2.gif)
+
+### Exemplarische Anwendung
+
+![KlassendiagrammGeoTester](Bilder/Klassendiagramm_Jahr1.png)
+
+Im Zuge einer Übung im ersten Jahr des POS Unterrichts wurde dieses Klassendiagramm erstellt. Es zeigt eine einfache Applikation, der es möglich ist, die Fläche bzw. den Umfang von einer oder mehreren Figuren (Kreis oder Dreieck) zu berechnen. Das Interface "FigurHelper" enthält Methoden, die zum setzen und erhalten des Umfangs und der Fläche dienen. Das Interface "FigurHelper" wird von der abstrakten Klasse "AFigur" implementiert, welche die Grundstruktur der eigentlichen Figuren vorgibt. Die Klasse "GeoTester" hat eine ArrayList vom Typ "AFigur" als Datenfeld gespeichert. Die Klassen "Dreieck" und "Kreis" extenden jeweils zur abstrakten Klasse "Figur" - sprich, diese haben jeweils eine "ist ein"-Beziehung. 
+
+- Contain and Delegate
+
+Hier nun noch ein Beispiel zu Contain and Delegate. Im Prinzip bedeuted dies, dass (wie in diesem Beispiel ersichtlich) die Klasse "TestBox" ein Objekt vom Typ "Shape" enthält. Der Punkt "delegate" greift dort, wo in der "draw()"-Methode die "draw()"-Methode der Klasse "Shape" aufgerufen wird - sprich, die Klasse "TestBox" delegiert eine Aufgabe (hier das Zeichnen) an die Klasse "Shape".
+
+![ContainAndDelegate](Bilder/Klassendiagramm_delegate.gif)
+
+
+## Sequenzdiagramm
+
+### Einsatzzweck
+Ein Sequenzdiagramm ist ein Diagrammtyp in der Unified Modeling Language (UML), der verwendet wird, um die Interaktionen zwischen verschiedenen Objekten in einem System darzustellen. Es zeigt die zeitliche Abfolge von Nachrichten, die zwischen den Objekten ausgetauscht werden, und stellt somit den Ablauf von Prozessen und Funktionalitäten innerhalb des Systems grafisch dar.
+
+Ein Sequenzdiagramm kann dabei helfen, ein besseres Verständnis dafür zu entwickeln, wie ein System funktioniert und wie verschiedene Objekte innerhalb des Systems miteinander interagieren. Es kann auch dazu beitragen, potenzielle Probleme oder Engpässe im System zu identifizieren und zu lösen.
+
+Typische Einsatzbereiche von Sequenzdiagrammen sind die Analyse und das Design von Software-Systemen, aber sie können auch in anderen Bereichen wie der Geschäftsprozessmodellierung oder der Systemintegration eingesetzt werden.
+
+### Wesentliche Notationsformen
+- Objekt: Ein Objekt wird durch einen rechteckigen Kasten dargestellt und trägt den Namen des Objekts. Das Objekt kann auch optional eine Nummerierung haben, um es von anderen Objekten zu unterscheiden.
+
+- Aktivierung: Eine Aktivierung wird durch eine vertikale gestrichelte Linie dargestellt, die das Leben eines Objekts darstellt. Sie zeigt an, dass ein Objekt aktiv ist und eine bestimmte Aktion ausführt.
+
+- Nachrichten: Eine Nachricht wird durch eine Pfeillinie dargestellt, die von einem Objekt zum anderen zeigt. Die Nachricht enthält in der Regel Informationen darüber, welche Aktion das empfangende Objekt ausführen soll. Eine Nachricht kann auch optional eine Rückgabe enthalten.
+
+- Lebenslinie: Die Lebenslinie wird durch eine durchgezogene Linie dargestellt, die das Leben eines Objekts darstellt. Sie zeigt an, dass ein Objekt existiert und während der Laufzeit des Systems aktiv ist.
+
+- Fragment: Ein Fragment wird verwendet, um komplexe Abläufe darzustellen, die aus mehreren Nachrichten bestehen. Ein Fragment wird durch eine gestrichelte Linie dargestellt und kann entweder ein Alternativfragment, ein Optionsfragment oder ein Schleifenfragment sein.
+
+- Nachrichtenbeschriftung: Die Beschriftung einer Nachricht kann Informationen über die Art der Nachricht, Parameter oder andere Details enthalten.
+
+![Sequenzdiagramm_Erklärung](Bilder/Sequenzdiagramm_Beispiel.png)
+
+### Exemplarische Anwendung
+Systemdesign: Sequenzdiagramme können verwendet werden, um das Design eines Systems zu planen und zu modellieren. Sie können verwendet werden, um die Interaktionen zwischen verschiedenen Systemkomponenten zu modellieren und zu testen, bevor das System implementiert wird.
+
+Fehlerbehebung: Sequenzdiagramme können auch bei der Fehlerbehebung nützlich sein, da sie die Interaktionen zwischen verschiedenen Objekten in einem System darstellen. Wenn ein Fehler auftritt, kann das Sequenzdiagramm helfen, die Ursache des Fehlers zu finden und zu beheben.
+
+Testen: Sequenzdiagramme können auch bei der Erstellung von Testszenarien hilfreich sein. Sie können verwendet werden, um die erwarteten Ergebnisse von Interaktionen zwischen verschiedenen Systemkomponenten zu definieren und zu überprüfen.
+
+Dokumentation: Sequenzdiagramme können auch in der Dokumentation eines Systems verwendet werden, um die Funktionsweise des Systems zu erklären und zu veranschaulichen.
+
+Schulung: Sequenzdiagramme können auch in Schulungen verwendet werden, um die Funktionsweise eines Systems zu erklären und zu veranschaulichen. Sie können dazu beitragen, dass die Schulungsteilnehmer ein besseres Verständnis dafür entwickeln, wie verschiedene Komponenten eines Systems interagieren.
+
+![Sequenzdiagramm](Bilder/Sequenzdiagramm_Beispiel2.jpg)
+
+In diesem einfachen Beispiel haben wir zwei Klassen (Cashier & System). Im Programmablauf veranlasst der Cashier einen neuen Verkauf. In einer Schleife werden dann Artikel mit einer bestimmten Anzahl dem Verkauf hinzugefügt. Der Cashier gibt die Artikel ein, das System gibt eine Beschreibung, den Einzelpreis und den Gesamtpreis zurück. Hat der Cashier alle Artikel eingegeben, wird der Sale beendet und das System gibt den Endpreis inkl. der Steuern zurück. Der Cashier erhält das Geld und teilt dem System die übergebene Summe mit. Das System gibt dann das Wechselgeld und die Rechnung zurück. Der Prozess ist damit abgeschlossen.
+
+## Zustandsdiagramm
+
+### Einsatzzweck
+Ein Zustandsdiagramm ist eine graphische Darstellung des Verhaltens eines Systems, das aus einer begrenzten Anzahl von Zuständen besteht. Zustandsdiagramme werden häufig in der Softwareentwicklung verwendet, um das Verhalten eines Systems zu modellieren und zu visualisieren.
+
+Ein Zustandsdiagramm besteht aus Zuständen, Übergängen und Ereignissen. Zustände repräsentieren den aktuellen Zustand des Systems, während Übergänge zeigen, wie das System von einem Zustand in einen anderen übergeht. Ereignisse sind Auslöser für Übergänge.
+
+Ein Zustandsdiagramm kann verwendet werden, um das Verhalten eines Systems zu modellieren und zu analysieren, einschließlich seiner Reaktion auf Ereignisse und die Aktionen, die bei jedem Übergang ausgeführt werden. Es kann auch verwendet werden, um mögliche Probleme oder Fehler im Verhalten des Systems zu identifizieren und zu beheben.
+
+Zustandsdiagramme können auf verschiedene Arten verwendet werden, einschließlich der Modellierung von Benutzeroberflächen, der Modellierung von Geschäftsprozessen und der Modellierung von Echtzeit-Systemen. Sie können auch in der Testautomatisierung eingesetzt werden, um sicherzustellen, dass das System korrekt funktioniert und auf Ereignisse richtig reagiert.
+
+Insgesamt sind Zustandsdiagramme ein leistungsfähiges Werkzeug zur Modellierung und Analyse des Verhaltens von Systemen und können in verschiedenen Bereichen der Softwareentwicklung und der Systemtechnik eingesetzt werden.
+
+### Wesentliche Notationsformen
+- Zustände: Ein Zustand wird in einem Zustandsdiagramm durch einen Kreis dargestellt. Ein Zustand stellt einen bestimmten Zustand des Systems dar, z.B. "geöffnet" oder "geschlossen".
+
+- Übergänge: Ein Übergang wird in einem Zustandsdiagramm durch einen Pfeil dargestellt. Ein Übergang zeigt an, wie das System von einem Zustand in einen anderen übergeht, z.B. von "geöffnet" zu "geschlossen".
+
+- Startzustand: Der Startzustand wird durch einen Pfeil, der in einen Kreis führt, dargestellt. Dies zeigt an, in welchem Zustand das System beginnt, z.B. "ausgeschaltet".
+
+- Endzustand: Der Endzustand wird durch einen Kreis mit einem Pfeil, der herausführt, dargestellt. Dies zeigt an, dass das System in diesem Zustand endet, z.B. "abgeschlossen".
+
+- Aktionen: Eine Aktion ist eine Operation oder eine Funktion, die ausgeführt wird, wenn ein Übergang stattfindet. Aktionen werden in einem Zustandsdiagramm in der Nähe des Pfeils, der den Übergang darstellt, notiert.
+
+- Bedingungen: Eine Bedingung ist eine logische Aussage, die überprüft wird, bevor ein Übergang stattfindet. Bedingungen werden in einem Zustandsdiagramm in der Nähe des Pfeils notiert.
+
+![Zustandsdiagramm_Notation](Bilder/Zustandsdiagramm_Notation.jpg)
+
+![Zustandsdiagramm_Notation](Bilder/Zustandsdiagramm_Notation2.png)
+
+### Exemplarische Anwendung
+
