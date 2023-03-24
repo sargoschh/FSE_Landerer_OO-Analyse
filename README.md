@@ -327,15 +327,6 @@ Typische Einsatzbereiche von Sequenzdiagrammen sind die Analyse und das Design v
 ![Sequenzdiagramm_Erklärung](Bilder/Sequenzdiagramm_Beispiel.png)
 
 ### Exemplarische Anwendung
-Systemdesign: Sequenzdiagramme können verwendet werden, um das Design eines Systems zu planen und zu modellieren. Sie können verwendet werden, um die Interaktionen zwischen verschiedenen Systemkomponenten zu modellieren und zu testen, bevor das System implementiert wird.
-
-Fehlerbehebung: Sequenzdiagramme können auch bei der Fehlerbehebung nützlich sein, da sie die Interaktionen zwischen verschiedenen Objekten in einem System darstellen. Wenn ein Fehler auftritt, kann das Sequenzdiagramm helfen, die Ursache des Fehlers zu finden und zu beheben.
-
-Testen: Sequenzdiagramme können auch bei der Erstellung von Testszenarien hilfreich sein. Sie können verwendet werden, um die erwarteten Ergebnisse von Interaktionen zwischen verschiedenen Systemkomponenten zu definieren und zu überprüfen.
-
-Dokumentation: Sequenzdiagramme können auch in der Dokumentation eines Systems verwendet werden, um die Funktionsweise des Systems zu erklären und zu veranschaulichen.
-
-Schulung: Sequenzdiagramme können auch in Schulungen verwendet werden, um die Funktionsweise eines Systems zu erklären und zu veranschaulichen. Sie können dazu beitragen, dass die Schulungsteilnehmer ein besseres Verständnis dafür entwickeln, wie verschiedene Komponenten eines Systems interagieren.
 
 ![Sequenzdiagramm](Bilder/Sequenzdiagramm_Beispiel2.jpg)
 
@@ -373,3 +364,27 @@ Insgesamt sind Zustandsdiagramme ein leistungsfähiges Werkzeug zur Modellierung
 
 ### Exemplarische Anwendung
 
+![Zustandsdiagramm_Beispiel](Bilder/Zustandsdiagramm_Flug.png)
+
+In diesem einfachen Beispiel geht es um eine Flugreservierung. Mit der Klasse "Flugreservation" können Flüge reserviert, gecanceld und gebucht werden. Im Zustandsdiagramm starten wir vom Startzustand. Die Methode "reservieren()" wird aufgerufen. Der Flug ist nun also reserviert. Der reservierten Flug kann nun entweder mit der Methode "canceln()" gecanceld oder mit der Methode "buchen()" gebucht werden. Wird der Flug gecanceld, ist die Reservierung storniert - von diesem Zustand können wir nur mehr zum Endzustand gelangen. Wird der Flug mit der Methode "buchen()" gebucht, landen wir bei einer Entscheidung. Entweder kann der Flug gebucht werden und der neue Zustand lautet "Flug gebucht", oder der Flug kann nicht gebucht werden und der Zustand lautet "Reservation gecancelt", von wo wir wieder beim Endzustand landen. Kann der Flug gebucht werden, wird der Zustand verändert auf "Flug gebucht" und wir können von dort zum Endzustand wechseln.
+
+## USE-Case Diagramm 1
+
+![UseCaseDiagramm_OnlineShop](Bilder/UseCaseWebshop.png)
+
+In diesem Use-Case Diagramm sieht man einen Online-Shop und die Nutzung dessen. Das Rechteck steht hier für den Shop selbst, die Ovale innerhalb des Rechtecks stehen für die einzelnen Use-Cases. Außerhalb des Rechtecks befinden sich die Akteure, die mit den Use-Cases agieren. Der Use-Case "Make Purchase" inkludiert die beiden Use-Cases "View Items" und "Checkout", da man keinen Kauf durchführen kann, ohne die Artikel anzuschauen und ohne den Kauf abzuschließen. 
+Zunächst werden nun die Kunden als Akteure beschrieben. Der Akteur "Web Customer" dient als Mutterklasse. 
+
+
+```mermaid
+  %%{init: {'theme': 'neutral'}}%%
+  componentDiagram
+    WordPress-Website --> Quiz-Plugin
+    WordPress-Website --> Kreuzworträtsel-Plugin
+    WordPress-Website --> Beitragsanzeige-Funktion
+    WordPress-Website --> Foren-Funktion
+    WordPress-Website --> Wiki-Suchfunktion
+    WordPress-Website --> Bootstrap-Frontend
+    WordPress-Website --> Chat-Funktion
+    Hosting-Firma --> Subdomain-Website
+    Subdomain-Website --> WordPress-Website
