@@ -1,0 +1,23 @@
+@startuml USE-CaseKino
+left to right direction
+
+actor Kunde
+actor Kassierer
+
+rectangle Kino {
+  Kunde -- (Kinokarte kaufen)
+  (Kinokarte kaufen) <|-- (Vorbestellt)
+  (Kinokarte kaufen) <|-- (Nicht-Vorbestellt)
+  (Kinokarte kaufen) -- (Rechnung bezahlen)
+  Kunde -- (Popcorn und Getränke bestellen)
+  (Rechnung bezahlen) -- (Popcorn und Getränke bestellen) 
+  (Rechnung bezahlen) -- (Kreditkarte bezahlen) 
+  (Rechnung bezahlen) -- (Bar bezahlen)
+  (Kreditkarte bezahlen) -- (Automatische Prüfung)
+  (Bar bezahlen) -- Kassierer
+  (Automatische Prüfung) -- Kassierer
+}
+
+@enduml
+
+

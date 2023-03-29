@@ -373,18 +373,23 @@ In diesem einfachen Beispiel geht es um eine Flugreservierung. Mit der Klasse "F
 ![UseCaseDiagramm_OnlineShop](Bilder/UseCaseWebshop.png)
 
 In diesem Use-Case Diagramm sieht man einen Online-Shop und die Nutzung dessen. Das Rechteck steht hier für den Shop selbst, die Ovale innerhalb des Rechtecks stehen für die einzelnen Use-Cases. Außerhalb des Rechtecks befinden sich die Akteure, die mit den Use-Cases agieren. Der Use-Case "Make Purchase" inkludiert die beiden Use-Cases "View Items" und "Checkout", da man keinen Kauf durchführen kann, ohne die Artikel anzuschauen und ohne den Kauf abzuschließen. 
-Zunächst werden nun die Kunden als Akteure beschrieben. Der Akteur "Web Customer" dient als Mutterklasse. 
 
+Zunächst werden nun die Kunden als Akteure beschrieben. Der Akteur "Web Customer" dient als Mutterklasse. Besucht man zum ersten mal die Website, ist man ein "New Costumer", der noch keinen User-Account besitzt. Ein unregestrierter Kunde kann Artikel ansehen und sich mit den "Client Register" regestrieren. Ein "Registered Customer" kann ebenso Artikel ansehen, und kann über "Make Purchase" einen Kauf durchführen. 
+Es gibt weitere Akteure:
+- "Service Authentication"
+- "Identity Provider"
+- "Credit Payment Service" 
+- "PayPal"
 
-```mermaid
-  %%{init: {'theme': 'neutral'}}%%
-  componentDiagram
-    WordPress-Website --> Quiz-Plugin
-    WordPress-Website --> Kreuzworträtsel-Plugin
-    WordPress-Website --> Beitragsanzeige-Funktion
-    WordPress-Website --> Foren-Funktion
-    WordPress-Website --> Wiki-Suchfunktion
-    WordPress-Website --> Bootstrap-Frontend
-    WordPress-Website --> Chat-Funktion
-    Hosting-Firma --> Subdomain-Website
-    Subdomain-Website --> WordPress-Website
+Der Use-Case "View Items" ist mit den Akteuren "Service Authentication" und "Identity Provider" verbunden. "Checkout" ist mit "Service Authentication", "Identity Provider", "Credit Payment System" und "PayPal" verbunden ist. "Client Register" ist nur mit "Service Authentication" verbunden.
+
+## USE-Case Diagramm 2
+
+![UseCaseDiagramm_Lieferkette](Bilder/UseCaseLieferkette.png)
+
+Im vorliegenden USE-Case Diagramm gibt es die Akteure "Hungriger Kunde", "Bezahlsystem" und "E-Mail-System". Außerdem die Use-Cases "Als Kunde registrieren", "Essen bestellen", "Bestellbestätigung senden", "Online bezahlen", "Mit EC-Karte bezahlen" und "Mit Kreditkarte bezahlen".
+Der "Hungrige Kunde" verwendet den Use-Case "Als Kunde registrieren", um sich zu registrieren. Anschließend kann er "Essen bestellen". Der Use-Case "Essen bestellen" inkludiert "Bestellbestätigung senden", das bedeutet, dass kein Essen bestellt werden kann, ohne eine Bestellbestätigung zu senden. Der Use-Case "Essen bestellen" wird um den Use-Case "Online bezahlen" erweitert. Das bedeutet, das Essen bestellt werden kann, ohne online zu bezahlen, diese Funktion den Use-Case aber um Funktionen erweitert. Der Use-Case "Bestellbestätigung senden" kommuniziert mit dem Akteur "E-Mail-System", was darauf schließen lässt, dass die Bestätigungen per Mail versendet werden. Der Use-Case "Online bezahlen" fungiert als Mutterklasse für die Use-Cases "Mit Kreditkarte bezahlen" und "Mit EC-Karte bezahlen" (Generalisierung). Des weiteren kommuniziert "Online bezahlen" mit dem Akteur "Bezahlsystem".
+
+## USE-Case Diagramm 3
+
+In einem Kino kann ein Gast Kinokarten an der Kasse kaufen, die vorbestellt sein könnten. Außerdem ist es möglich Popcorn und Getränke zu bestellen. Danach bezahlt der Kunde beim Kassierer die Rechnung. Es ist auch möglich mit Kreditkarte zu bezahlen, welche bei Bedarf einer automatischen Prüfung unterzogen werden kann.
