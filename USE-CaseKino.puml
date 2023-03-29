@@ -1,4 +1,5 @@
 @startuml USE-CaseKino
+skinparam actorStyle awesome
 left to right direction
 
 actor Kunde
@@ -6,13 +7,13 @@ actor Kassierer
 
 rectangle Kino {
   Kunde -- (Kinokarte kaufen)
+  Kunde -- (Popcorn und Getränke bestellen)
   (Kinokarte kaufen) <|-- (Vorbestellt)
   (Kinokarte kaufen) <|-- (Nicht-Vorbestellt)
   (Kinokarte kaufen) -- (Rechnung bezahlen)
-  Kunde -- (Popcorn und Getränke bestellen)
   (Rechnung bezahlen) -- (Popcorn und Getränke bestellen) 
-  (Rechnung bezahlen) -- (Kreditkarte bezahlen) 
-  (Rechnung bezahlen) -- (Bar bezahlen)
+  (Rechnung bezahlen) <. (Kreditkarte bezahlen) : include
+  (Rechnung bezahlen) <. (Bar bezahlen) : include
   (Kreditkarte bezahlen) -- (Automatische Prüfung)
   (Bar bezahlen) -- Kassierer
   (Automatische Prüfung) -- Kassierer
