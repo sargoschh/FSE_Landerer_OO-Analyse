@@ -15,9 +15,8 @@ ActorFontName Courier
 ActorBackgroundColor<< Human >> Gold
 }
 left to right direction
-actor :Verwaltung: as V
-actor :Mitarbeiter: as M
-actor :Patient: as P
+actor :Verwaltung1: as V
+actor :Verwaltung2: as V2
 actor :Adressdatenbank: as ADB
 
 rectangle Anwendungssystem {
@@ -26,11 +25,11 @@ rectangle Anwendungssystem {
   V -- (Mitarbeiter entlassen)
   V -- (Patient aufnehmen)
   V -- (Patient entlassen)
-  (Mitarbeiter einstellen) <. (Daten erfassen) : include
-  (Patient aufnehmen) <. (Daten erfassen) : include
-  M -- (Daten erfassen)
-  P -- (Daten erfassen)
-  (Daten erfassen) -- (Adressvalidierung)
+  V2 -- (Patient aufnehmen)
+  V2 -- (Patient entlassen)
+  (Mitarbeiter einstellen) .> (Daten erfassen) : include
+  (Patient aufnehmen) .> (Daten erfassen) : include
+  (Daten erfassen) <. (Adressvalidierung) : extends
   (Adressvalidierung) -- ADB
 }
 @enduml

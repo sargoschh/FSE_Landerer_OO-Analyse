@@ -1,22 +1,37 @@
 @startuml USE-CaseKino
 skinparam actorStyle awesome
+
+skinparam usecase {
+BackgroundColor DarkSeaGreen
+BorderColor DarkSlateGray
+
+BackgroundColor<< Main >> YellowGreen
+BorderColor<< Main >> YellowGreen
+
+ArrowColor Olive
+ActorBorderColor black
+ActorFontName Courier
+
+ActorBackgroundColor<< Human >> Gold
+}
 left to right direction
 
 actor Kunde
 actor Kassierer
+actor :Credit Card Check: <<Service>> as CCC
+
 
 rectangle Kino {
   Kunde -- (Kinokarte kaufen)
-  Kunde -- (Popcorn und Getränke bestellen)
+  (Kinokarte kaufen) <. (Popcorn und Getränke bestellen) : extends
   (Kinokarte kaufen) <|-- (Vorbestellt)
   (Kinokarte kaufen) <|-- (Nicht-Vorbestellt)
   (Kinokarte kaufen) -- (Rechnung bezahlen)
-  (Rechnung bezahlen) -- (Popcorn und Getränke bestellen) 
-  (Rechnung bezahlen) <. (Kreditkarte bezahlen) : include
-  (Rechnung bezahlen) <. (Bar bezahlen) : include
-  (Kreditkarte bezahlen) -- (Automatische Prüfung)
-  (Bar bezahlen) -- Kassierer
-  (Automatische Prüfung) -- Kassierer
+  (Rechnung bezahlen) <|-- (Kreditkarte bezahlen)
+  (Rechnung bezahlen) <|-- (Bar bezahlen)
+  (Kreditkarte bezahlen) .> (Automatische Prüfung) : extends
+  (Automatische Prüfung) -- CCC
+  (Rechnung bezahlen) -- Kassierer
 }
 
 @enduml

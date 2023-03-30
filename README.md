@@ -3,6 +3,7 @@
 ## Objektorientierte Analyse
 
 ### Ziele
+
 - Identifizierung von Objekten und deren Eigenschaften: In der OOA geht es darum, die relevanten Objekte in einem System zu identifizieren und ihre Eigenschaften zu beschreiben. Objekte können physisch oder abstrakt sein, wie zum Beispiel ein Auto, ein Benutzerprofil oder ein Datenbank-Management-System.
 
 - Modellierung der Beziehungen zwischen den Objekten: Nachdem die relevanten Objekte identifiziert wurden, muss die Beziehung zwischen diesen Objekten modelliert werden. Diese Beziehungen können verschiedene Formen annehmen, z. B. Vererbung, Aggregation oder Assoziation.
@@ -16,6 +17,7 @@
 - Verbesserung der Wiederverwendbarkeit: Objektorientierte Systeme sind oft modular aufgebaut, was die Wiederverwendbarkeit von Code erhöht. Die OOA kann dazu beitragen, dass diese Module klar definiert und wiederverwendbar sind.
 
 ### Requirements Engineering
+
 Requirements Engineering (RE) bezieht sich auf den Prozess der Identifizierung, Analyse, Dokumentation, Validierung und Verwaltung von Anforderungen an ein System. Ziel des RE ist es, sicherzustellen, dass das entwickelte System den Bedürfnissen und Erwartungen der Benutzer entspricht und alle Anforderungen erfüllt werden.
 
 Im Allgemeinen umfasst Requirements Engineering die folgenden Schritte:
@@ -31,6 +33,7 @@ Im Allgemeinen umfasst Requirements Engineering die folgenden Schritte:
 Requirements Engineering ist ein kritischer Prozess für den Erfolg eines Softwareprojekts. Durch eine gründliche Analyse und Spezifikation von Anforderungen kann ein System entworfen und entwickelt werden, das den Erwartungen der Benutzer entspricht und ihre Bedürfnisse erfüllt.
 
 ### Strukturelle Modellierung
+
 Strukturelle Modellierung bezieht sich auf den Prozess der Erstellung von Modellen, die die statischen Aspekte eines Systems darstellen. Es hilft, die Elemente, die das System ausmachen, zu identifizieren und ihre Beziehungen zu beschreiben. Die Strukturelle Modellierung ist ein wichtiger Bestandteil der Softwareentwicklung, da sie die Grundlage für die Entwicklung von Softwarearchitekturen bildet.
 
 Es gibt verschiedene Arten von strukturellen Modellen, einschließlich:
@@ -48,6 +51,7 @@ Es gibt verschiedene Arten von strukturellen Modellen, einschließlich:
 Strukturelle Modelle helfen Entwicklern, ein besseres Verständnis der Komplexität und des Umfangs einer Softwareanwendung zu entwickeln und Probleme in der Architektur zu identifizieren, bevor mit der Implementierung begonnen wird. Sie können auch verwendet werden, um die Wiederverwendbarkeit von Code zu erhöhen und die Wartbarkeit einer Anwendung zu verbessern.
 
 ### Dynamische Modellierung
+
 Dynamische Modellierung bezieht sich auf den Prozess der Erstellung von Modellen, die die Verhaltensaspekte eines Systems darstellen. Im Gegensatz zur strukturellen Modellierung, die die statischen Aspekte eines Systems beschreibt, beschreibt die dynamische Modellierung die Interaktionen zwischen den Elementen eines Systems im Laufe der Zeit.
 
 Es gibt verschiedene Arten von dynamischen Modellen, einschließlich:
@@ -63,6 +67,7 @@ Es gibt verschiedene Arten von dynamischen Modellen, einschließlich:
 Dynamische Modelle sind hilfreich, um den Ablauf von Prozessen in einer Anwendung zu verstehen und sicherzustellen, dass sie den Anforderungen der Benutzer entsprechen. Sie können auch zur Verifikation und Validierung von Softwareanwendungen verwendet werden, um sicherzustellen, dass sie ordnungsgemäß funktionieren und alle erwarteten Ergebnisse liefern.
 
 ### Was ist OOA?
+
 OOA steht für "Objektorientierte Analyse". Es handelt sich um einen Prozess der Softwareentwicklung, der sich auf die Identifizierung und Analyse der Objekte und deren Interaktionen in einem System konzentriert. Im Rahmen der OOA werden die Anforderungen eines Systems aus der Perspektive der Objekte beschrieben, die es ausmachen.
 
 Im Laufe der OOA werden verschiedene Techniken verwendet, um das Verhalten und die Struktur des Systems zu verstehen. Dazu gehören beispielsweise die Erstellung von Use-Case-Diagrammen, die Identifizierung von Objekten und Attributen, die Analyse von Beziehungen zwischen Objekten sowie die Erstellung von Klassendiagrammen.
@@ -72,6 +77,7 @@ Ein wichtiger Aspekt der OOA ist die Verwendung von Abstraktion. Indem Entwickle
 Die OOA bildet auch die Grundlage für die objektorientierte Programmierung (OOP), die darauf abzielt, die Identifizierung von Objekten, die in der OOA beschrieben wurden, in den Programmiercode zu übertragen. Indem Entwickler eine detaillierte Analyse des Systems durchführen, bevor sie mit der Programmierung beginnen, können sie sicherstellen, dass sie eine effektive und effiziente Lösung entwickeln, die den Anforderungen des Systems entspricht.
 
 ### Wozu braucht man sie?
+
 - Verbesserte Verständlichkeit: Durch OOA wird das System in kleinere, leichter verständliche Komponenten aufgeteilt. Dies erleichtert die Kommunikation zwischen den Entwicklern und anderen Projektbeteiligten.
 
 - Bessere Wartbarkeit: Eine objektorientierte Modellierung kann die Wartbarkeit des Systems verbessern. Objekte können leichter verändert werden, ohne dass der Rest des Systems beeinträchtigt wird.
@@ -83,6 +89,7 @@ Die OOA bildet auch die Grundlage für die objektorientierte Programmierung (OOP
 - Bessere Skalierbarkeit: Eine objektorientierte Modellierung kann die Skalierbarkeit des Systems verbessern. Das System kann leichter an die Anforderungen angepasst werden, ohne dass es neu entwickelt werden muss.
 
 ### Wie und wann setzt man sie ein?
+
 OOA wird in der Regel in der frühen Phase des Softwareentwicklungsprozesses eingesetzt, um die Anforderungen an das System zu verstehen und in eine objektorientierte Modellierung umzusetzen. Typischerweise wird OOA angewendet, bevor die eigentliche Implementierung des Systems beginnt.
 
 Die folgenden Schritte beschreiben, wie OOA in der Praxis eingesetzt werden kann:
@@ -102,6 +109,7 @@ Um OOA erfolgreich einzusetzen, ist es wichtig, dass alle Projektbeteiligten ein
 ## Anforderungsanalyse mit Anwendungsfällen
 
 ### Grundlagen
+
 Die Anforderungsanalyse ist ein wichtiger Teil des Software-Entwicklungsprozesses. Es geht darum, die Anforderungen an das zu entwickelnde System zu verstehen, zu dokumentieren und zu spezifizieren. Eine Möglichkeit, Anforderungen zu dokumentieren und zu spezifizieren, ist die Verwendung von Anwendungsfällen.
 
 Ein Anwendungsfall ist eine Beschreibung der Funktionalität eines Systems aus der Perspektive eines Benutzers. Er beschreibt, was das System tun soll, wenn ein Benutzer eine bestimmte Aktion ausführt. Ein Anwendungsfall besteht aus mehreren Schritten oder Schritten, die beschreiben, wie das System auf die Aktion des Benutzers reagieren soll.
@@ -111,6 +119,7 @@ Die Erstellung von Anwendungsfällen beginnt in der Regel mit der Identifikation
 Anwendungsfälle können auch verwendet werden, um potenzielle Probleme im System zu identifizieren, bevor sie auftreten. Durch die Analyse der Anwendungsfälle können Entwickler und Tester potenzielle Schwachstellen im System identifizieren und beheben, bevor das System in Produktion geht.
 
 ### Vorgehensweise
+
 - Identifikation der Stakeholder: Die erste Phase der Anforderungsanalyse ist die Identifikation aller Stakeholder, also Personen oder Gruppen, die ein Interesse oder eine Verbindung zum zu entwickelnden System haben. Dazu gehören in der Regel Benutzer, Kunden, Betreiber, Geschäftsführer und andere.
 
 - Ermittlung der Anforderungen: In dieser Phase werden die Anforderungen an das System ermittelt. Dazu können Interviews mit den Stakeholdern geführt, Workshops veranstaltet oder Fragebögen ausgefüllt werden. Das Ziel ist es, alle Anforderungen zu sammeln, die das System erfüllen soll.
@@ -124,6 +133,7 @@ Anwendungsfälle können auch verwendet werden, um potenzielle Probleme im Syste
 - Dokumentation der Anforderungen: Nach der Validierung werden die Anforderungen in einer detaillierten Spezifikation dokumentiert, die als Referenz für das Entwicklerteam dient. Diese Dokumentation sollte alle Anwendungsfälle, Anforderungen und die entsprechenden Prioritäten enthalten.
 
 ### Werkzeuge
+
 - Use-Case-Diagramme: Use-Case-Diagramme sind ein Werkzeug zur Visualisierung von Interaktionen zwischen einem System und seinen Benutzern oder anderen Systemen. Sie helfen dabei, die Funktionen des Systems zu identifizieren und zu definieren.
 
 - Use-Case-Beschreibungen: Use-Case-Beschreibungen sind detaillierte Beschreibungen der Interaktionen zwischen dem System und seinen Benutzern oder anderen Systemen. Sie enthalten normalerweise Schritte, die Benutzer ausführen, um bestimmte Ziele zu erreichen, sowie alternative Pfade und Ausnahmefälle.
@@ -141,6 +151,7 @@ Anwendungsfälle können auch verwendet werden, um potenzielle Probleme im Syste
 Diese Werkzeuge können in unterschiedlichem Maße nützlich sein, je nach Größe und Komplexität des Systems und der Anforderungen, die identifiziert werden müssen. Es ist wichtig, die richtigen Werkzeuge für die Anforderungsanalyse mit Anwendungsfällen auszuwählen und sie auf eine Weise einzusetzen, die den Bedürfnissen und Zielen des Projekts entspricht.
 
 ### Use Cases Beschreiben
+
 - Identifizieren des Akteurs: Der erste Schritt bei der Beschreibung eines Use Case ist die Identifizierung des Akteurs, der mit dem System interagiert. Der Akteur kann ein Benutzer, ein anderes System oder eine externe Einheit sein, die mit dem System kommuniziert.
 
 - Beschreibung des Ziels angeben: Der nächste Schritt besteht darin, das Ziel des Use Case zu beschreiben. Was soll das System erreichen, wenn der Use Case ausgeführt wird? Welches Problem soll durch den Use Case gelöst werden?
@@ -158,6 +169,7 @@ Diese Werkzeuge können in unterschiedlichem Maße nützlich sein, je nach Grö�
 Eine klare und verständliche Beschreibung des Use Case ist wichtig, damit alle Beteiligten das Verhalten des Systems verstehen und sich ein Bild von den Anforderungen machen können. Ein gut beschriebener Use Case sollte präzise sein und keine unnötigen Details enthalten, damit er leicht lesbar und verständlich bleibt.)
 
 ### UI Mockups
+
 UI Mockups (auch als Benutzeroberflächen-Mockups bezeichnet) sind visuelle Darstellungen, die das Design und die Funktionalität der Benutzeroberfläche eines Systems veranschaulichen. Sie spielen eine wichtige Rolle bei der Anforderungsanalyse, insbesondere im Zusammenhang mit Use Cases, da sie den Beteiligten ein besseres Verständnis der Benutzeroberfläche und ihrer Interaktionen mit dem System geben.
 
 Indem sie das Design der Benutzeroberfläche visualisieren, helfen UI Mockups den Beteiligten, das System besser zu verstehen, bevor es gebaut wird. Die Verwendung von UI Mockups kann auch dazu beitragen, potenzielle Probleme in der Benutzeroberfläche frühzeitig zu erkennen und zu beheben, bevor das System entwickelt wird. Dies kann dazu beitragen, Entwicklungszeit und -kosten zu sparen und sicherzustellen, dass das System die Anforderungen der Benutzer erfüllt.
@@ -167,6 +179,7 @@ In Bezug auf Use Cases können UI Mockups verwendet werden, um die Schritte zu v
 Insgesamt können UI Mockups bei der Anforderungsanalyse und dem Design von Systemen eine wertvolle Rolle spielen, da sie dazu beitragen, dass alle Beteiligten auf derselben Seite sind und ein gemeinsames Verständnis darüber haben, wie das System aussehen und funktionieren wird.
 
 ### Dokumentation
+
 Eine gute Dokumentation von Anwendungsfällen sollte folgende Schritte umfassen:
 
 - Identifizieren der beteiligten Akteure: Definieren der verschiedenen Personen oder Systeme, die in einem Anwendungsfall involviert sind, sowie ihre Rollen und Verantwortlichkeiten.
@@ -245,10 +258,10 @@ Feedback und Änderungen: Dokumentieren des Feedbacks und Änderungen, die währ
 
 Technische Dokumentation: Dokumentieren der technischen Anforderungen, wie z.B. Datenbankanforderungen, Schnittstellenanforderungen oder Systemarchitektur, die für die Umsetzung der User Stories erforderlich sind.
 
-
 ## Klassendiagramm
 
 ### Einsatzzweck
+
 Ein Klassendiagramm ist ein UML-Diagramm, das zur Visualisierung der Struktur eines Systems verwendet wird. Es stellt die Klassen und deren Beziehungen zueinander dar.
 
 Ein Klassendiagramm wird oft in der objektorientierten Programmierung verwendet, um den Entwurf von Klassen und deren Beziehungen im System zu beschreiben. Es zeigt die Eigenschaften und Methoden jeder Klasse, sowie deren Vererbungshierarchien und Beziehungen zu anderen Klassen.
@@ -257,8 +270,8 @@ Das Klassendiagramm kann auch zur Kommunikation zwischen Entwicklern und Stakeho
 
 Insgesamt kann das Klassendiagramm als ein wichtiger Entwurfsbaustein in der Softwareentwicklung angesehen werden, da es dazu beiträgt, die Klassen und ihre Beziehungen zu anderen Klassen im System klar zu definieren und zu kommunizieren.
 
-
 ### Wesentliche Notationsformen
+
 - Klassenname: Der Name der Klasse wird in der obersten Teil des Kästchens geschrieben, das die Klasse repräsentiert.
 
 - Attribute: Die Attribute oder Eigenschaften der Klasse werden unter dem Klassennamen aufgelistet. Sie werden oft durch Namen und Datentypen dargestellt.
@@ -293,7 +306,7 @@ Insgesamt kann das Klassendiagramm als ein wichtiger Entwurfsbaustein in der Sof
 
 ![KlassendiagrammGeoTester](Bilder/Klassendiagramm_Jahr1.png)
 
-Im Zuge einer Übung im ersten Jahr des POS Unterrichts wurde dieses Klassendiagramm erstellt. Es zeigt eine einfache Applikation, der es möglich ist, die Fläche bzw. den Umfang von einer oder mehreren Figuren (Kreis oder Dreieck) zu berechnen. Das Interface "FigurHelper" enthält Methoden, die zum setzen und erhalten des Umfangs und der Fläche dienen. Das Interface "FigurHelper" wird von der abstrakten Klasse "AFigur" implementiert, welche die Grundstruktur der eigentlichen Figuren vorgibt. Die Klasse "GeoTester" hat eine ArrayList vom Typ "AFigur" als Datenfeld gespeichert. Die Klassen "Dreieck" und "Kreis" extenden jeweils zur abstrakten Klasse "Figur" - sprich, diese haben jeweils eine "ist ein"-Beziehung. 
+Im Zuge einer Übung im ersten Jahr des POS Unterrichts wurde dieses Klassendiagramm erstellt. Es zeigt eine einfache Applikation, der es möglich ist, die Fläche bzw. den Umfang von einer oder mehreren Figuren (Kreis oder Dreieck) zu berechnen. Das Interface "FigurHelper" enthält Methoden, die zum setzen und erhalten des Umfangs und der Fläche dienen. Das Interface "FigurHelper" wird von der abstrakten Klasse "AFigur" implementiert, welche die Grundstruktur der eigentlichen Figuren vorgibt. Die Klasse "GeoTester" hat eine ArrayList vom Typ "AFigur" als Datenfeld gespeichert. Die Klassen "Dreieck" und "Kreis" extenden jeweils zur abstrakten Klasse "Figur" - sprich, diese haben jeweils eine "ist ein"-Beziehung.
 
 - Contain and Delegate
 
@@ -301,10 +314,10 @@ Hier nun noch ein Beispiel zu Contain and Delegate. Im Prinzip bedeuted dies, da
 
 ![ContainAndDelegate](Bilder/Klassendiagramm_delegate.gif)
 
-
 ## Sequenzdiagramm
 
 ### Einsatzzweck
+
 Ein Sequenzdiagramm ist ein Diagrammtyp in der Unified Modeling Language (UML), der verwendet wird, um die Interaktionen zwischen verschiedenen Objekten in einem System darzustellen. Es zeigt die zeitliche Abfolge von Nachrichten, die zwischen den Objekten ausgetauscht werden, und stellt somit den Ablauf von Prozessen und Funktionalitäten innerhalb des Systems grafisch dar.
 
 Ein Sequenzdiagramm kann dabei helfen, ein besseres Verständnis dafür zu entwickeln, wie ein System funktioniert und wie verschiedene Objekte innerhalb des Systems miteinander interagieren. Es kann auch dazu beitragen, potenzielle Probleme oder Engpässe im System zu identifizieren und zu lösen.
@@ -312,6 +325,7 @@ Ein Sequenzdiagramm kann dabei helfen, ein besseres Verständnis dafür zu entwi
 Typische Einsatzbereiche von Sequenzdiagrammen sind die Analyse und das Design von Software-Systemen, aber sie können auch in anderen Bereichen wie der Geschäftsprozessmodellierung oder der Systemintegration eingesetzt werden.
 
 ### Wesentliche Notationsformen
+
 - Objekt: Ein Objekt wird durch einen rechteckigen Kasten dargestellt und trägt den Namen des Objekts. Das Objekt kann auch optional eine Nummerierung haben, um es von anderen Objekten zu unterscheiden.
 
 - Aktivierung: Eine Aktivierung wird durch eine vertikale gestrichelte Linie dargestellt, die das Leben eines Objekts darstellt. Sie zeigt an, dass ein Objekt aktiv ist und eine bestimmte Aktion ausführt.
@@ -335,6 +349,7 @@ In diesem einfachen Beispiel haben wir zwei Klassen (Cashier & System). Im Progr
 ## Zustandsdiagramm
 
 ### Einsatzzweck
+
 Ein Zustandsdiagramm ist eine graphische Darstellung des Verhaltens eines Systems, das aus einer begrenzten Anzahl von Zuständen besteht. Zustandsdiagramme werden häufig in der Softwareentwicklung verwendet, um das Verhalten eines Systems zu modellieren und zu visualisieren.
 
 Ein Zustandsdiagramm besteht aus Zuständen, Übergängen und Ereignissen. Zustände repräsentieren den aktuellen Zustand des Systems, während Übergänge zeigen, wie das System von einem Zustand in einen anderen übergeht. Ereignisse sind Auslöser für Übergänge.
@@ -346,6 +361,7 @@ Zustandsdiagramme können auf verschiedene Arten verwendet werden, einschließli
 Insgesamt sind Zustandsdiagramme ein leistungsfähiges Werkzeug zur Modellierung und Analyse des Verhaltens von Systemen und können in verschiedenen Bereichen der Softwareentwicklung und der Systemtechnik eingesetzt werden.
 
 ### Wesentliche Notationsformen
+
 - Zustände: Ein Zustand wird in einem Zustandsdiagramm durch einen Kreis dargestellt. Ein Zustand stellt einen bestimmten Zustand des Systems dar, z.B. "geöffnet" oder "geschlossen".
 
 - Übergänge: Ein Übergang wird in einem Zustandsdiagramm durch einen Pfeil dargestellt. Ein Übergang zeigt an, wie das System von einem Zustand in einen anderen übergeht, z.B. von "geöffnet" zu "geschlossen".
@@ -372,13 +388,14 @@ In diesem einfachen Beispiel geht es um eine Flugreservierung. Mit der Klasse "F
 
 ![UseCaseDiagramm_OnlineShop](Bilder/UseCaseWebshop.png)
 
-In diesem Use-Case Diagramm sieht man einen Online-Shop und die Nutzung dessen. Das Rechteck steht hier für den Shop selbst, die Ovale innerhalb des Rechtecks stehen für die einzelnen Use-Cases. Außerhalb des Rechtecks befinden sich die Akteure, die mit den Use-Cases agieren. Der Use-Case "Make Purchase" inkludiert die beiden Use-Cases "View Items" und "Checkout", da man keinen Kauf durchführen kann, ohne die Artikel anzuschauen und ohne den Kauf abzuschließen. 
+In diesem Use-Case Diagramm sieht man einen Online-Shop und die Nutzung dessen. Das Rechteck steht hier für den Shop selbst, die Ovale innerhalb des Rechtecks stehen für die einzelnen Use-Cases. Außerhalb des Rechtecks befinden sich die Akteure, die mit den Use-Cases agieren. Der Use-Case "Make Purchase" inkludiert die beiden Use-Cases "View Items" und "Checkout", da man keinen Kauf durchführen kann, ohne die Artikel anzuschauen und ohne den Kauf abzuschließen.
 
-Zunächst werden nun die Kunden als Akteure beschrieben. Der Akteur "Web Customer" dient als Mutterklasse. Besucht man zum ersten mal die Website, ist man ein "New Costumer", der noch keinen User-Account besitzt. Ein unregestrierter Kunde kann Artikel ansehen und sich mit den "Client Register" regestrieren. Ein "Registered Customer" kann ebenso Artikel ansehen, und kann über "Make Purchase" einen Kauf durchführen. 
+Zunächst werden nun die Kunden als Akteure beschrieben. Der Akteur "Web Customer" dient als Mutterklasse. Besucht man zum ersten mal die Website, ist man ein "New Costumer", der noch keinen User-Account besitzt. Ein unregestrierter Kunde kann Artikel ansehen und sich mit den "Client Register" regestrieren. Ein "Registered Customer" kann ebenso Artikel ansehen, und kann über "Make Purchase" einen Kauf durchführen.
 Es gibt weitere Akteure:
+
 - "Service Authentication"
 - "Identity Provider"
-- "Credit Payment Service" 
+- "Credit Payment Service"
 - "PayPal"
 
 Der Use-Case "View Items" ist mit den Akteuren "Service Authentication" und "Identity Provider" verbunden. "Checkout" ist mit "Service Authentication", "Identity Provider", "Credit Payment System" und "PayPal" verbunden ist. "Client Register" ist nur mit "Service Authentication" verbunden.
@@ -394,13 +411,113 @@ Der "Hungrige Kunde" verwendet den Use-Case "Als Kunde registrieren", um sich zu
 
 In einem Kino kann ein Gast Kinokarten an der Kasse kaufen, die vorbestellt sein könnten. Außerdem ist es möglich Popcorn und Getränke zu bestellen. Danach bezahlt der Kunde beim Kassierer die Rechnung. Es ist auch möglich mit Kreditkarte zu bezahlen, welche bei Bedarf einer automatischen Prüfung unterzogen werden kann.
 
+![USE-CaseDiagramm_Kino](out/USE-CaseKino/USE-CaseKino.png)
 
 ## USE-Case Diagramm 4
 
 Es soll ein Anwendungssystem zur Unterstützung der Geschäftsprozesse in einem Krankenhaus entwickelt werden. Das System soll folgende Aufgaben erledigen:
-•	Herr Müller und Herr Maier seien in der Verwaltung angestellt.
-•	Herr Müller soll Mitarbeiter einstellen und entlassen können. Sowohl Herr Müller als auch Herr Maier kann Patienten aufnehmen und entlassen.
-•	Sowohl bei der Einstellung von Mitarbeitern, als auch bei der Aufnahme von Patienten müssen Name und Adresse erfasst werden. Um redundante Anwendungsfall-Beschreibungen zu verhindern wird diese Tätigkeit in einen gesonderten Anwendungsfall ausgelagert.
-•	Falls der einzustellende Mitarbeiter bzw. der aufzunehmende Patient seinen Wohnsitz am Ort des Krankenhauses hat, wird geprüft, ob die angegebene Adresse am Wohnort existiert. Lagern Sie auch diesen Anwendungsfall aus.
+• Herr Müller und Herr Maier seien in der Verwaltung angestellt.
+• Herr Müller soll Mitarbeiter einstellen und entlassen können. Sowohl Herr Müller als auch Herr Maier kann Patienten aufnehmen und entlassen.
+• Sowohl bei der Einstellung von Mitarbeitern, als auch bei der Aufnahme von Patienten müssen Name und Adresse erfasst werden. Um redundante Anwendungsfall-Beschreibungen zu verhindern wird diese Tätigkeit in einen gesonderten Anwendungsfall ausgelagert.
+• Falls der einzustellende Mitarbeiter bzw. der aufzunehmende Patient seinen Wohnsitz am Ort des Krankenhauses hat, wird geprüft, ob die angegebene Adresse am Wohnort existiert. Lagern Sie auch diesen Anwendungsfall aus.
+
+![USE-CaseDiagramm_Krankenhaus](out/USE-CaseKrankenhaus/USE-CaseKrankenhaus.png)
+
+## USE-Case Detailbeschreibung
+
+Der USE-Case "Essen bestellen", der im Diagramm "Lieferkette" zu finden ist, wird nun genauer beschrieben:
+
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-0pky">Name</td>
+    <td class="tg-0pky">Essen bestellen</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Ziel im Kontext</td>
+    <td class="tg-0pky">Ein hungriger Kunde bestellt essen</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Akteure</td>
+    <td class="tg-0pky">Hungriger Kunde</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Trigger</td>
+    <td class="tg-0pky">Hungriger Kunde öffnet die App der Lieferkette</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Essenzielle Schritte</td>
+    <td class="tg-0pky">
+      1. Der Kunde öffnet die App der Lieferkette auf seinem Handy oder Laptop. <br>
+      2. Der hungrige Kunde durchsucht das Angebot der Gerichte. <br>
+      3. Der hungrige Kunde wählt ein oder mehrere Gerichte seiner Wahl aus und fügt diese dem Warenkorb hinzu.<br>
+      4. Der Kunde prüft seinen Warenkorb und schickt die Bestellung ab.
+    </td>
+  </tr>
+  <tr>
+    <td rowspan=2 class="tg-0pky">Erweiterungen</td>
+    <td class="tg-0pky">
+      1.1. Auf Seiten der Lieferkette gibt es technische Probleme. <br>
+      1.2. Der Kunde kann die Gerichte durchsuchen. <br>
+      1.3. Aufgrund der technischen Probleme kann der Kunde die Gerichte nicht dem Warenkorb hinzufügen. <br>
+      1.4. Der Kunde schließt die App. 
+    </td>
+  </tr>
+  <tr>
+  <td class="tg-0pky">
+      4.1. Die Bestellung landet beim Lieferanten. <br>
+      4.2. Der Lieferant bemerkt, dass er einige benötigte Zutaten nicht lagernd hat. <br>
+      3.3. Die Bestellung wird von Seiten des Lieferanten storniert. 
+    </td>
+  </tr>
+</tbody>
+</table>
+
+In folgender Tabelle wird der USE-Case "Kinokarte kaufen" aus dem USE-Case Diagramm "Kino" näher beschrieben:
+
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-0pky">Name</td>
+    <td class="tg-0pky">Kinokarte kaufen</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Ziel im Kontext</td>
+    <td class="tg-0pky">Ein Kunde kauft ein Kinoticket</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Akteure</td>
+    <td class="tg-0pky">Kunde, Kassierer</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Trigger</td>
+    <td class="tg-0pky">Kunde kommt an die Kinokasse</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Essenzielle Schritte</td>
+    <td class="tg-0pky">
+      1. Der Kunde kommt zur Kinokasse, um ein Ticket zu kaufen. <br>
+      2. Der Kunde teilt dem Kassierer mit, welche Vorstellung er besuchen möchte. <br>
+      3. Der Kassierer gibt die Bestellung in seinem System ein.<br>
+      4. Der Kassierer bestätigt die Bestellung. Der Kunde kann nun bezahlen.
+    </td>
+  </tr>
+  <tr>
+    <td rowspan=2 class="tg-0pky">Erweiterungen</td>
+    <td class="tg-0pky">
+      1.1. Der Kunde hat das Ticket bereits vorab reserviert. <br>
+      1.2. Der Kassierer sucht im System nach der Reservierung. <br>
+      1.3. Der Kassierer bestätigt die Bestellung und der Kunde kann bezahlen. 
+    </td>
+  </tr>
+  <tr>
+  <td class="tg-0pky">
+      3.1. Das System teilt dem Kassierer mit, dass für die gewünschte Vorstellung kein Sitzplatz verfügbar ist. <br>
+      3.2. Der Kassierer berichtet die schlechte Nachricht dem Kunden. <br>
+      3.3. Der Kunde verlässt das Kino. 
+    </td>
+  </tr>
+</tbody>
+</table>
 
 
