@@ -1,0 +1,31 @@
+@startuml Klassendiagramm_Person
+class Person {
+  - name: string
+  - telefonnummer: string
+  - email: string
+}
+
+class Wohnadresse {
+  - straße: string
+  - stadt: string
+  - plz: string
+  - land: string
+  - bestätigt: boolean
+  + labelDrucken(): void
+}
+
+class Student {
+  - matrikelnummer: string
+  - durchschnittsNote: float
+  + inModulEinschreiben(): void
+}
+
+class Professor {
+  - gehalt: float
+}
+
+Person "1" -- "0..*" Wohnadresse : wohnt in / bewohnt von
+Person <|-down- Student
+Person <|-down- Professor
+
+@enduml

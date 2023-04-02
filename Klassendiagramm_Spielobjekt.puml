@@ -1,0 +1,73 @@
+@startuml Klassendiagramm_Videothek
+
+abstract class Spielobjekt {
+    - x: int
+    - y: int
+    - speed: int
+    + Spielobjekt(x:int, y:int, speed:int)
+    + setSpeed(speed:int): void
+    + getSpeed(): int
+    + setPosition(x:int, y:int)
+    + getX(): int
+    + getY(): int
+    + zeichnen(): void
+}
+
+class Raumschiff {
+    - schussenergie: int
+    - schussmodus: int
+    - maxAnzahlSchussvorrichtungen: int
+    + Raumschiff(x:int, y:int, speed:int)
+    + getSchussenergie(): int
+    + setSchussenergie(schussenergie:int)
+    + getSchussmodus(): int
+    + setSchussmodus(modus:int): void
+    + getMaxAnzahlSchussvorrichtungen(): int
+    + setMaxAnzahlSchussvorrichtungen(maxAnzahl:int)
+    + schussvorrichtungInstallieren(sv:Schussvorrichtung): void
+    + schiessen(): void
+    + zeichnen(): void
+}
+
+abstract class Laserschuss {
+    - schussenergie: int
+    + Laserschuss(x:int, y:int, schussenergie:int, speed:int)
+    + getSchussenergie(): int
+    + zeichnen(): void
+}
+
+class LaserschussGroß {
+    + LaserschussGroß(x:int, y:int)
+    + zeichnen(): void
+}
+
+class LaserschussKlein {
+    + LaserschussKlein(x:int, y:int)
+    + zeichnen(): void
+}
+
+abstract class Schussvorrichtung {
+    + <<abstract>> schussErzeugen(schiffPosX:int, schiffPosY:int): Laserschuss
+    + <<abstract>> zeichnen(): void
+}
+
+class VorrichtungGroß {
+    + schussErzeugen(schiffPosX:int, schiffPosY:int): Laserschuss
+    + zeichnen(): void
+}
+
+class VorrichtungKlein {
+    + schussErzeugen(schiffPosX:int, schiffPosY:int): Laserschuss
+    + zeichnen(): void
+}
+
+Spielobjekt <|-- Raumschiff
+Spielobjekt <|-- Laserschuss
+Raumschiff --> "*" Laserschuss
+Laserschuss <|-- LaserschussGroß
+Laserschuss <|-- LaserschussKlein
+Raumschiff --> "0..10" Schussvorrichtung 
+Schussvorrichtung <|-- VorrichtungGroß
+Schussvorrichtung <|-- VorrichtungKlein
+
+@enduml

@@ -300,6 +300,18 @@ Insgesamt kann das Klassendiagramm als ein wichtiger Entwurfsbaustein in der Sof
 
 ![KlassendiagrammBeschreibung](Bilder/Klassendiagramm_Beschreibung.jpg)
 
+### Beschriftung der Beziehung - Multipizität
+
+Die Multiplizität in UML-Klassendiagrammen gibt an, wie viele Objekte einer Klasse in Beziehung zu einem Objekt einer anderen Klasse stehen können. Es gibt drei Arten von Multiplizitäten:
+
+- Eine feste Multiplizität wird mit einer Zahl angegeben. Zum Beispiel bedeutet "1" oder "1..1", dass genau ein Objekt existieren muss, während "0..*" bedeutet, dass keine Objekte oder beliebig viele Objekte existieren können.
+
+- Eine variable Multiplizität wird mit "n" oder "m" angegeben. Dies ist nützlich, wenn die genaue Anzahl von Objekten nicht bekannt oder nicht festgelegt ist.
+
+- Eine unbestimmte Multiplizität wird mit "*" angegeben. Dies bedeutet, dass keine Begrenzung der Anzahl der Objekte besteht.
+
+Es ist wichtig, die richtige Multiplizität für die Beziehungen zwischen den Klassen zu wählen, um sicherzustellen, dass die Beziehung genau so modelliert wird, wie es in der realen Welt der Fall ist. Wenn eine falsche Multiplizität verwendet wird, kann dies zu falschen Annahmen und Fehlern in der Implementierung führen.
+
 ![KlassendiagrammBeschreibung2](Bilder/Klassendiagramm_Beschreibung2.gif)
 
 ### Exemplarische Anwendung
@@ -427,6 +439,8 @@ Es soll ein Anwendungssystem zur Unterstützung der Geschäftsprozesse in einem 
 
 Der USE-Case "Essen bestellen", der im Diagramm "Lieferkette" zu finden ist, wird nun genauer beschrieben:
 
+![UseCase_EssenBestellen](Bilder/UseCaseEssenBestellen.png)
+
 <table class="tg">
 <tbody>
   <tr>
@@ -475,6 +489,8 @@ Der USE-Case "Essen bestellen", der im Diagramm "Lieferkette" zu finden ist, wir
 
 In folgender Tabelle wird der USE-Case "Kinokarte kaufen" aus dem USE-Case Diagramm "Kino" näher beschrieben:
 
+![UseCase_KinokarteKaufen](Bilder/USE-CaseKinokarteKaufen.png)
+
 <table class="tg">
 <tbody>
   <tr>
@@ -520,4 +536,105 @@ In folgender Tabelle wird der USE-Case "Kinokarte kaufen" aus dem USE-Case Diagr
 </tbody>
 </table>
 
+
+Zuletzt wird der USE-Case "Client Register" aus dem USE-Case Diagramm "Online Shopping" näher beschrieben:
+
+![UseCase_ClientRegister](Bilder/UseCaseWebshopClientRegister.png)
+
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-0pky">Name</td>
+    <td class="tg-0pky">Client Register</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Ziel im Kontext</td>
+    <td class="tg-0pky">Ein neuer Kunde möchte sich registrieren</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Akteure</td>
+    <td class="tg-0pky">Kunde, 'Service' Authentication</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Trigger</td>
+    <td class="tg-0pky">Neuer Kunde kommt in den Online-Shop und möchte sich registrieren</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Essenzielle Schritte</td>
+    <td class="tg-0pky">
+      1. Der neue Kunde ruft den Online-Shop auf und möchte registrierter Kunde werden. <br>
+      2. Der Kunde wählt im Login-Fenster den "Registrieren"-Butten aus. <br>
+      3. Der neue Kunde gibt seine persönlichen Daten ein.<br>
+      4. Der neue Kunde sendet seine Registrierung ab. <br>
+      5. Der Akteur 'Service - Authentication' prüft die eingegebenen Daten und sendet bei erfolgreicher Prüfung eine Verifizierungs-E-Mail an den neuen Kunden. <br>
+      6. Der neue Kunde bestätigt die E-Mail und ist von nun an ein registrierter Kunde.
+    </td>
+  </tr>
+  <tr>
+    <td rowspan=2 class="tg-0pky">Erweiterungen</td>
+    <td class="tg-0pky">
+      2.1. Die Server der Website weisen eine Störung auf. <br>
+      2.2. Der neue Kunde wird anstelle der Seite mit dem Registrierungs-Formular auf eine Error-Page mit der Meldung "Error 500 - Internal Server Error" weitergeleitet. <br>
+      2.3. Der neue Kunde verlässt den Online-Shop. 
+    </td>
+  </tr>
+  <tr>
+  <td class="tg-0pky">
+      5.1. Die "System - Authentication" stellt fest, dass die vom Kunden eingegebene E-Mail Adresse bereits im System registriert ist. <br>
+      5.2. Das System teilt dem Kunden mit, dass die angegebene E-Mail Adresse bereits registriert ist. <br>
+      5.3. Dem Kunden fällt ein, dass er sich bereits registriert hat und fordert ein neues Passwort an. 
+    </td>
+  </tr>
+</tbody>
+</table>
+
+
+## Klassendiagramm 1
+
+![Klassendiagramm_Bestellung](Bilder/Klassendiagramm_OnlineShop.png)
+
+Folgende Aussagen bezüglich des Klassendiagramms "Bestellung" werden nun mit Richtig ( [x] ) oder Falsch ( [ ] ) gekennzeichnet.
+
+- [ x ]	Es kann im System Kunden geben die nie eine Bestellung durchgeführt haben.
+- [  ]	Die Klasse Einzahlung ist die Oberklasse der Klasse Bestellung.
+- [ x ]	Jedes Objekt der Klasse Bestellung_Detail besitzt genau einen Artikel.
+- [ x ]	Alle Einzahlungen mit Kreditkarte haben einen Betrag.
+- [ x ]	Es ist möglich, dass ein Artikel keine Assoziation mit einem Bestellung_Detail besitzt.
+- [  ]	Jedes Bestellung_Detail, das Teil einer Bestellung ist, hat seinen eigenen Status und sein eigenes Datum.
+
+## Klassendiagramm 2
+
+Jede Person hat einen Namen, eine Telefonnummer und E-Mail. Jede Wohnadresse wird von nur einer Person bewohnt. Es kann aber sein, dass einige Wohnadressen nichtbewohnt sind. Den Wohnadressen sind je eine Strasse, eine Stadt, eine PLZ und ein Land zugeteilt. Alle Wohnadressen können bestätigt werden und als Beschriftung (für Postversand) gedruckt werden. Es gibt zwei Sorten von Personen: Student, welcher sich für ein Modul einschreiben kann und Professor, welcher einen Lohn hat. Der Student besitzt eine Matrikelnummer und eine Durchschnittsnote.
+
+![Klassendiagramm_Person](out/Klassendiagramm_Person/Klassendiagramm_Person.png)
+
+## Klassendiagramm 3
+
+Sie haben den Auftrag, eine Online-Videothek zu realisieren. Sie haben dazu folgende Angaben erhalten:
+-	Die Videothek unterstützt das Ausleihen von Filmen für registrierte Kunden. Dazu müssen
+-	Kunden sich zunächst mit ihrer Kundennummer und ihrem Passwort anmelden.
+-	Kunden werden zusammen mit ihrem Guthaben verwaltet.
+-	Filme besitzen einen individuellen Namen und Preis.
+-	Ein Film wird über einen Streaming-Server bereitgestellt. Der Server kann hierzu einen kundenspezifischen Link generieren.
+
+![Klassendiagramm_Videothek](out/Klassendiagramm_Videothek/Klassendiagramm_Videothek.png)
+
+## Klassendiagramm 4
+
+Im folgenden wird ein Klassendiagramm näher beschrieben:
+
+![Klassendiagramm_Spiel](Bilder/Klassendiagramm_Spiel.png)
+
+- Die abstrakte Klasse "Spielobjekt" dient als Oberklasse für das gesamte Spiel und definiert alle notwendigen Eigenschaften, die alle Objekte im Spiel teilen, wie x- und y-Koordinaten und Geschwindigkeit.
+- Die Klasse "Raumschiff" ist ein Spielobjekt und repräsentiert das Raumschiff, das der Benutzer steuert. Sie hat zusätzliche Eigenschaften wie die Schussenergie und den Schussmodus sowie Methoden, um Schüsse zu erzeugen und zu feuern.
+- Die abstrakte Klasse "Laserschuss" ist auch ein Spielobjekt und stellt einen Laserstrahl dar, der vom Raumschiff abgefeuert wird. Sie hat eine Schussenergie und kann gezeichnet werden.
+- Die Klassen "LaserschussGroß" und "LaserschussKlein" sind konkrete Unterklassen von "Laserschuss" und stellen verschiedene Arten von Laserstrahlen dar, die unterschiedliche Zeichenmethoden haben.
+- Die abstrakte Klasse "Schussvorrichtung" stellt eine generische Schussvorrichtung dar, die in das Raumschiff eingebaut werden kann und Schüsse erzeugen kann.
+- Die Klassen "VorrichtungGroß" und "VorrichtungKlein" sind konkrete Unterklassen von "Schussvorrichtung" und stellen verschiedene Arten von Schussvorrichtungen dar, die unterschiedliche Schüsse erzeugen können.
+
+Die Beziehungen zwischen den Klassen sind auch im Diagramm angegeben. Das Raumschiff und die Laserstrahlen sind Spielobjekte, daher erben sie von der Klasse "Spielobjekt". Das Raumschiff hat eine beliebige Anzahl von Laserstrahlen, die Beziehung der beiden Klassen wird daher als "*"-Multiplizität angegeben. Das Raumschiff kann auch eine begrenzte Anzahl von Schussvorrichtungen haben, daher ist die Beziehung zwischen Raumschiff und Schussvorrichtung als "0..10"-Multiplizität angegeben. Schließlich erben die Schussvorrichtungen von der abstrakten Klasse "Schussvorrichtung".
+
+## Sequenzdiagramm 1
+
+![Sequenzdiagramm_Comments](Bilder/Sequenzdiagramm_Comments.png)
 
