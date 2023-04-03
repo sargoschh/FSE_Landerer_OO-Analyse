@@ -348,7 +348,16 @@ Typische Einsatzbereiche von Sequenzdiagrammen sind die Analyse und das Design v
 
 - Fragment: Ein Fragment wird verwendet, um komplexe Abläufe darzustellen, die aus mehreren Nachrichten bestehen. Ein Fragment wird durch eine gestrichelte Linie dargestellt und kann entweder ein Alternativfragment, ein Optionsfragment oder ein Schleifenfragment sein.
 
-- Nachrichtenbeschriftung: Die Beschriftung einer Nachricht kann Informationen über die Art der Nachricht, Parameter oder andere Details enthalten.
+- Nachrichtenbeschriftung: Die Beschriftung einer Nachricht kann Informationen über die Art der Nachricht, Parameter oder andere Details enthalten. Hier sind ein paar Beispiele:
+  - Synchron: Eine synchrone Nachricht ist eine Nachricht, bei der der Absender auf eine Antwort des Empfängers wartet, bevor er mit der nächsten Aktion fortfährt.
+
+  - Asynchron: Eine asynchrone Nachricht ist eine Nachricht, bei der der Absender nicht auf eine Antwort des Empfängers wartet, bevor er mit der nächsten Aktion fortfährt.
+
+  - Rückgabe: Eine Rückgabe ist eine Nachricht, die vom Empfänger an den Absender gesendet wird, um eine Antwort auf eine vorherige Nachricht zu geben.
+
+  - Erstellung: Eine Erstellungsnachricht wird gesendet, wenn ein Objekt erstellt wird.
+
+![Sequenzdiagramm_Notation](out/Sequenzdiagramm_Pfeile/messages.png)
 
 ![Sequenzdiagramm_Erklärung](Bilder/Sequenzdiagramm_Beispiel.png)
 
@@ -395,6 +404,40 @@ Insgesamt sind Zustandsdiagramme ein leistungsfähiges Werkzeug zur Modellierung
 ![Zustandsdiagramm_Beispiel](Bilder/Zustandsdiagramm_Flug.png)
 
 In diesem einfachen Beispiel geht es um eine Flugreservierung. Mit der Klasse "Flugreservation" können Flüge reserviert, gecanceld und gebucht werden. Im Zustandsdiagramm starten wir vom Startzustand. Die Methode "reservieren()" wird aufgerufen. Der Flug ist nun also reserviert. Der reservierten Flug kann nun entweder mit der Methode "canceln()" gecanceld oder mit der Methode "buchen()" gebucht werden. Wird der Flug gecanceld, ist die Reservierung storniert - von diesem Zustand können wir nur mehr zum Endzustand gelangen. Wird der Flug mit der Methode "buchen()" gebucht, landen wir bei einer Entscheidung. Entweder kann der Flug gebucht werden und der neue Zustand lautet "Flug gebucht", oder der Flug kann nicht gebucht werden und der Zustand lautet "Reservation gecancelt", von wo wir wieder beim Endzustand landen. Kann der Flug gebucht werden, wird der Zustand verändert auf "Flug gebucht" und wir können von dort zum Endzustand wechseln.
+
+## Aktivitätsdiagramm
+
+###	Einsatzzweck
+Ein Aktivitätsdiagramm ist ein UML-Diagramm, das verwendet wird, um Geschäftsprozesse, Workflows oder Aktivitäten in einem System oder einer Organisation zu modellieren. Es zeigt den Ablauf von Aktivitäten, Entscheidungen und parallelen Verarbeitungen, um den Workflow zu visualisieren und den Prozessablauf zu verstehen.
+
+Aktivitätsdiagramme sind besonders nützlich, um die verschiedenen Schritte eines Prozesses zu verstehen und zu dokumentieren, um den Prozess zu verbessern oder zu automatisieren. Sie werden oft in der Softwareentwicklung, im Projektmanagement und in der Geschäftsprozessmodellierung verwendet, um komplexe Systeme zu visualisieren und zu dokumentieren.
+
+###	Wesentliche Notationsformen
+- Start- und Endknoten: Der Startknoten zeigt den Beginn des Aktivitätsdiagramms an, während der Endknoten das Ende des Diagramms markiert.
+
+- Aktionen: Aktionen werden als rechteckige Formen dargestellt und repräsentieren eine einzelne Aufgabe oder Aktion, die in der Aktivität ausgeführt wird.
+
+- Entscheidungen: Entscheidungen werden als Rauten dargestellt und zeigen an, dass eine Wahl getroffen werden muss. Abhängig von der Bedingung kann der Ablauf in unterschiedliche Richtungen verzweigen.
+
+- Verzweigungen: Verzweigungen werden als parallele Linien dargestellt und zeigen an, dass die Aktivität in mehrere Pfade unterteilt wird, die parallel ausgeführt werden können.
+
+- Zusammenführungen: Zusammenführungen werden als parallele Linien mit einem halbkreisförmigen Ende dargestellt und zeigen an, dass zwei oder mehrere Pfade in der Aktivität wieder zusammengeführt werden.
+
+- Flusslinien: Flusslinien werden als geradlinige Pfeile dargestellt und zeigen die Reihenfolge der Aktionen in der Aktivität an.
+
+- Objektknoten: Objektknoten werden als rechteckige Formen mit Namen des Objekts dargestellt und repräsentieren ein Objekt, das während der Aktivität erstellt oder verwendet wird.
+
+- Swimlanes: Swimlanes werden als vertikale Bereiche dargestellt und dienen zur Gruppierung von Aktionen oder Objekten. Sie können auch verwendet werden, um verschiedene Benutzer oder Systemkomponenten darzustellen.
+
+![Aktivitätsdiagramm_Elemente](Bilder/Aktivit%C3%A4tsdiagramm_Elemente.png)
+
+###	Exemplarische Anwendung anhand eines Beispiels
+
+![Aktivitätsdiagramm_Spaghetti](Bilder/Aktivit%C3%A4tsdiagramm_Spaghetti.png)
+
+In diesem einfachen Beispiel wird die Aktivität des Spaghettikochens näher beschrieben. Gestartet wird am Startpunkt. Zunächst wird Wasser gekocht und die noch rohen Spaghetti eingefüllt. Diese müssen für 10 Minuten kochen. Haben die Nudeln fertig gekocht, hat sich ihr Zustand von "roh" in "al dente" verändert. 
+
+Dies ist nur ein sehr einfaches Beispiel eines Aktivitätsdiagramms. Es befinden sich weder Entscheidungen/Verzweigungen noch ein Endknoten darin.
 
 ## USE-Case Diagramm 1
 
@@ -636,5 +679,63 @@ Die Beziehungen zwischen den Klassen sind auch im Diagramm angegeben. Das Raumsc
 
 ## Sequenzdiagramm 1
 
+Im folgenden wird das dargestellte Sequenzdiagramm "submit_comments" genauer beschreiben. Bei den Pfeilen (also den Nachrichten) handelt es sich hauptsächlich um synchrone Nachrichten (durchgezogene Linie mit gefüllter Pfeilspitze), Antwortnachrichten (strichlierte Linie) und Erstell-Nachrichten (strichlierte Linie). Eine genauere Beschreibung ist in Abschnitt "Sequenzdiagramm - Wesentliche Notationsformen" zu finden.
+
 ![Sequenzdiagramm_Comments](Bilder/Sequenzdiagramm_Comments.png)
 
+1. Der Nutzer möchte seinen Kommentar posten, indem er auf der Webseite auf die Schaltfläche "Submit" klickt. Dadurch wird die Methode "validate()" auf dem Objekt "window" aufgerufen und dieses wird aktiviert. 
+
+2. Das Objekt "window" ruft die Methode "validate()" auf dem Objekt "Comments" auf, um die Kommentare zu validieren. "Comments" wird ebenfalls aktiviert.
+
+3. Das Objekt "Comments" sendet eine createMessage an das Objekt "Proxy". Damit wird dieses neu im System erstellt.
+
+4. Das Objekt "Comments" teilt dem Objekt "Proxy" nun mit, dass dieses eine Ajax-Anfrage an den Server senden soll. Damit wird das Objekt "Proxy" auch aktiviert - das Objekt "Comments" wird wieder deaktiviert.
+
+5. Das Objekt "Proxy" sendet eine Ajax-Anfrage an den Server und aktiviert das Objekt "DWRServlet".
+
+6. Das Objekt "DWRServlet" ruft die Methode "validate()" auf dem Objekt "DWRService" auf, um die Kommentare zu validieren. Das Objekt "DWRService" wird aktiviert.
+
+7. Das Objekt "DWRService" prüft den Kommentar, sendet eine Antwort an das Objekt "DWRServlet" mit eventuellen Validierungsfehlern und wird wieder deaktiviert.
+
+8. Das Objekt "DWRServlet" sendet die Validierungsfehler an das Objekt "Proxy" zurück und wird ebenfalls deaktiviert.
+
+9. Das Objekt "Proxy" sendet das Ergebnis der Validierung mit einem "callback" an das Objekt "window" - das Objekt "Proxy" wird deaktiviert und gleichzeitig das Objekt "window" wieder aktiviert.
+
+10. Der nächste Teil wird nur gestartet, wenn es keine Validierungsfehler gibt. Das Objekt "window"  ruft die Methode "post_comments()" auf dem Objekt "Comments" auf, welches sogleich aktiviert wird.
+
+11. Das Objekt "Comments" ruft die Methode "BeginRequest()" auf dem Objekt "PluckRequestBatch" auf, um eine Anfrage an den Pluck-Server zu senden.
+
+12. Das Objekt "PluckRequestBatch" erstellt nun, mithilfe einer createMessage, wieder ein "Proxy"-Objekt und sendet eine Ajax-Anfrage mit den Daten (Kommentar) an den Pluck-Server. Das Objekt "Proxy" wird aktiviert und das Objekt "PluckRequestBatch" deaktiviert.
+
+13. Das Objekt "Proxy" sendet die empfangenen Daten über die Methode "postComments()" an das Objekt "PluckService", welcher gleichzeitig aktiviert wird.
+
+14. Das Objekt "PluckService" verarbeitet die empfangenen Daten, sendet eine Antwort im JSON-Format an das Objekt "Proxy" und wird wieder deaktiviert.
+
+15. Das Objekt "Proxy" sendet nun einen "callback" an das Objekt "windows" zurück, um den gegebenenfalls erstellten Kommentar anzuzeigen. Das Objekt "Proxy" wird deaktiviert und das Objekt "window" wieder aktiviert.
+
+16. Die beiden ref-Blöcke zeigen an, dass weitere Aktionen außerhalb des dargestellten Ablaufs stattfinden, diese aber dennoch relevant sind. 
+
+17. Im ersten Block findet eine entsprechende Fehlerbehandlung, die eventuell bei der Verarbeitung von Kommentaren auftreten, durch oder für den PluckService statt. Dieser unterbricht den eigentlichen Ablauf nicht und kann somit als Nebenprozess bezeichnet werden.
+
+18. Werden Kommentare erfolgreich erstellt, so werden anschließend alle bestehenden Kommentare aufgerufen, was im zweiten ref-Block wieder als Nebenprozess passiert.
+
+## Sequenzdiagramm 2
+
+Erstellen Sie dazu ein Sequenzdiagramm für folgenden Ablauf der Ausleihe:
+- Die Videothek berechnet zuerst, ob das Guthaben des Kunden reicht um den Film zu bezahlen.
+- Reicht das Guthaben nicht aus, wird stattdessen eine Aufforderung zum Ausfüllen des Guthabens
+angezeigt.
+- Falls das aktuelle Guthaben des Mitglieds ausreicht, veranlasst die Videothek einen Streaming-
+Server einen Link für den Film zu generieren.
+- Die Videothek zeigt dem Benutzer den Link an, unter dem der Film zugreifbar ist.
+
+Gehen Sie davon aus, dass sich das Mitglied bereits auf der Seite des gewünschten Films beendet.
+
+![Sequenzdiagramm_Videothek](out/Sequenzdiagramm_Videothek/videothek.png)
+
+
+## Aktivitätsdiagramm 1
+
+Das folgende Diagramm zeigt den Kauf eines Tickets
+
+![Aktivitätsdiagramm_Ticket](Bilder/Aktivit%C3%A4tsdiagramm_Ticket.png)

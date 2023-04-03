@@ -1,0 +1,41 @@
+@startuml videothek
+skinparam linetype ortho
+
+skinparam actorStyle awesome
+
+skinparam sequenceMessageAlign center
+
+skinparam sequence {
+ArrowColor Olive
+ActorBorderColor black
+ActorFontName Courier
+LifeLineBorderColor Olive
+LifeLineBackgroundColor #DarkSeaGreen
+
+ParticipantBorderColor DarkSlateGray
+ParticipantBackgroundColor DarkSeaGreen
+
+ArrowColor Olive
+ActorBorderColor black
+
+ActorBackgroundColor<< Human >> Gold
+}
+
+participant Videothek as V
+participant "Streaming-Server" as SS
+actor Kunde as K
+
+V -> K: getGuthaben()
+activate V
+K -->> V: returns Guthaben
+alt Guthaben reicht aus
+    V -> SS: generiereLink(film)
+    activate SS
+    SS -->> V: returns Link
+    deactivate SS
+    V -> K: showLink(link)
+else Guthaben reicht nicht aus
+    V -> K: ladeGuthabenAuf()
+end
+deactivate V
+@enduml
