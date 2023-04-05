@@ -1,0 +1,31 @@
+@startuml aktivitätsdiagramm_flughafen
+skinparam actorStyle awesome
+
+skinparam activity {
+  StartColor Olive
+  BarColor SaddleBrown
+  EndColor black
+  BackgroundColor DarkSeaGreen
+  BackgroundColor<< Begin >> Olive
+  BorderColor DarkSlateGray
+  ArrowColor Olive
+}
+
+|Fluggast|
+start
+:Ticket überprüfen;
+if (Ticket in Ordnung?) then (ja)
+  :Gepäck am Schalter aufgeben;
+  
+  if (Gepäckgewicht in Ordnung?) then (ja)
+    :Bordkarte ausstellen;
+  else (nein)
+    :Zusätzliche Kosten berechnen;
+    :Bordkarte ausstellen;
+  endif
+else (nein)
+  :Kundendienst konsultieren;
+endif
+|Fluggast|
+end
+@enduml

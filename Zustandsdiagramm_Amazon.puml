@@ -1,0 +1,27 @@
+@startuml Zustandsdiagramm_Amazon
+skinparam state {
+  StartColor Olive
+  EndColor black
+  BackgroundColor DarkSeaGreen
+  BackgroundColor<< Begin >> Olive
+  BorderColor DarkSlateGray
+}
+
+title Zustandsdiagramm Bestellung Amazon
+
+[*] --> WarenkorbBefüllt: Artikel im Warenkorb
+WarenkorbBefüllt --> BetragBezahlen: Betrag wird beglichen
+BetragBezahlen --> VorbereitungBestellung: Bestellung vorbereitet
+VorbereitungBestellung --> BestellungVersendet: Bestellung versendet
+BestellungVersendet --> BestellungGeliefert: Bestellung geliefert
+BestellungGeliefert --> [*]: Bestellung abgeschlossen
+
+WarenkorbBefüllt --> BestellungStorniert: Bestellung abgebrochen
+VorbereitungBestellung --> BestellungStorniert: Bestellung storniert
+BestellungStorniert --> [*]: Bestellung beendet
+BestellungGeliefert --> BestellungReturniert: Bestellung returniert
+BestellungReturniert --> VorbereitungBestellung: Bestellung wird neu geliefert
+BestellungReturniert --> BetragReturniert: Erstattung Zahlungsbetrag
+BetragReturniert --> [*]: Erstattung abgeschlossen
+
+@enduml

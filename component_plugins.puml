@@ -1,0 +1,64 @@
+@startuml startITeasy_C4ComponentPlugins
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+' uncomment the following line and comment the first to use locally
+' !include C4_Container.puml
+!include FONTAWESOME/server.puml
+!include DEVICONS/database.puml
+!include FONTAWESOME/server.puml
+!include DEVICONS/bootstrap.puml
+!include DEVICONS/wordpress.puml
+
+title startITeasy C4Component-Diagram
+
+Container(webserver, "Web Server", "HTTP Server", "Hostet die Lernwebsite", "server")
+ContainerDb(database, "Datenbank", "MySQL", "Speichert die Inhalte der Website sowie die Informationen der User", "database")
+
+Container_Boundary(wordpress, "WordPress Plugins") {
+    
+    Component(quiz, "H5P", "WordPress Plugin", "Stellt Quiz- und Kreuzworträtsel-Funktionen für die Website bereit", "wordpress")
+    Component(forum, "wpForo", "WordPress Plugin", "Bietet ein Forum zum Stellen von Fragen und zum Austausch von Informationen an", "wordpress")
+    Component(learnpress, "LearnPress", "WordPress Plugin", "Ermöglicht es, Kurse und Beiträge zu erstellen und anzugeigen", "wordpress")
+    Component(chat, "WiseChat", "WordPress Plugin", "Stellt eine Kommunikationsplattform für Website-Benutzer bereit", "wordpress")
+
+    
+    Rel(quiz, database, "Reads from and writes to")
+    Rel(forum, database, "Reads from and writes to")
+    
+    Rel(chat, database, "Reads from and writes to")
+    Rel(learnpress, database, "Reads from and writes to")
+
+    Rel(webserver, wordpress, "Hostet")
+    
+}
+
+@enduml
+SHOW_PERSON_OUTLINE()
+Person(user, User, "Angemeldeter Benutzer")
+
+System_Boundary(wordpress, "WordPress Website") {
+    Container(webserver1, "Webserver-Container", "SpringBoot Web-Framework", "Stellt Funktionen für Kommunikation (Thymeleaf) zwischen Backend und Webserver bereit")
+    Container(database1, "Datenbank-Container", "Kommunikation", "Stellt Funktionen für Kommunikation (JPA) zwischen Backend und Datenbank bereit")
+    Container(service, "Service-Container", "Business-Logik", "Ist für die Business-Logik des Systems veratwortlich")
+    Container(domain, "Domain-Container", "Entity-Klassen", "Entitys und deren Beziehungen untereinander werden darin definiert")
+    Container(exceptions, "Exceptions-Container", "Exceptions", "Spezifische Fehlermeldungen können mithilfe der Exceptions ausgegeben werden")
+}
+
+Container(webserver, "Apache Web Server", "HTTP Server", "Hostet den GrowManager", "server")
+ContainerDb(database, "Datenbank", "MySQL", "Speichert die Inhalte der Website sowie die Informationen der User", "database")
+
+System_Ext(host, "XAMPP", "Stellt im Probebetrieb Serverressourcen und Datenbank bereit")
+
+Rel(domain, webserver1, "Uses", "HTTPS")
+Rel(domain, database1, "Uses", "HTTPS")
+Rel(domain, service, "Uses", "HTTPS")
+
+Rel(exceptions, webserver1, "Uses", "HTTPS")
+Rel(exceptions, database1, "Uses", "HTTPS")
+Rel(exceptions, service, "Uses", "HTTPS")
+
+Rel(webserver, wordpress, "Hostet")
+
+Rel(webserver, host, "Gehostet von")
+Rel(database, host, "Gehostet von")

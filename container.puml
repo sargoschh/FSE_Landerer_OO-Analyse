@@ -1,0 +1,46 @@
+@startuml startITeasy_C4Container
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+' uncomment the following line and comment the first to use locally
+' !include C4_Container.puml
+!include FONTAWESOME/server.puml
+!include DEVICONS/database.puml
+!include FONTAWESOME/server.puml
+!include DEVICONS/bootstrap.puml
+!include DEVICONS/wordpress.puml
+
+LAYOUT_WITH_LEGEND()
+
+title GrowManager C4Container-Diagramm
+
+SHOW_PERSON_OUTLINE()
+Person(user, User, "Angemeldeter Benutzer")
+
+System_Boundary(wordpress, "WordPress Website") {
+    Container(backend, "Backend", "SpringBoot Application", "Stellt Funktionen für Kommunikation (Thymeleaf) zwischen Backend und Webserver bereit")
+    Container(frontend, "Thymeleaf-Frontend", "Java-Template-Engine", "Stellt Funktionen für Kommunikation (JPA) zwischen Backend und Datenbank bereit")
+    }
+
+Container(webserver, "Apache Web Server", "HTTP Server", "Hostet den GrowManager", "server")
+ContainerDb(database, "Datenbank", "MySQL", "Speichert die Inhalte der Website sowie die Informationen der User", "database")
+
+System_Ext(host, "XAMPP", "Stellt im Probebetrieb Serverressourcen und Datenbank bereit")
+
+Rel(user, wordpress, "Uses", "HTTPS")
+
+Rel(domain, webserver1, "Uses", "HTTPS")
+Rel(domain, database1, "Uses", "HTTPS")
+Rel(domain, service, "Uses", "HTTPS")
+
+Rel(exceptions, webserver1, "Uses", "HTTPS")
+Rel(exceptions, database1, "Uses", "HTTPS")
+Rel(exceptions, service, "Uses", "HTTPS")
+
+Rel(webserver, wordpress, "Hostet")
+
+Rel(webserver, host, "Gehostet von")
+Rel(database, host, "Gehostet von")
+
+
+@enduml

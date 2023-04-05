@@ -638,12 +638,12 @@ Zuletzt wird der USE-Case "Client Register" aus dem USE-Case Diagramm "Online Sh
 
 Folgende Aussagen bezüglich des Klassendiagramms "Bestellung" werden nun mit Richtig ( [x] ) oder Falsch ( [ ] ) gekennzeichnet.
 
-- [ x ]	Es kann im System Kunden geben die nie eine Bestellung durchgeführt haben.
-- [  ]	Die Klasse Einzahlung ist die Oberklasse der Klasse Bestellung.
-- [ x ]	Jedes Objekt der Klasse Bestellung_Detail besitzt genau einen Artikel.
-- [ x ]	Alle Einzahlungen mit Kreditkarte haben einen Betrag.
-- [ x ]	Es ist möglich, dass ein Artikel keine Assoziation mit einem Bestellung_Detail besitzt.
-- [  ]	Jedes Bestellung_Detail, das Teil einer Bestellung ist, hat seinen eigenen Status und sein eigenes Datum.
+- [x]	Es kann im System Kunden geben die nie eine Bestellung durchgeführt haben.
+- [ ]	Die Klasse Einzahlung ist die Oberklasse der Klasse Bestellung.
+- [x]	Jedes Objekt der Klasse Bestellung_Detail besitzt genau einen Artikel.
+- [x]	Alle Einzahlungen mit Kreditkarte haben einen Betrag.
+- [x]	Es ist möglich, dass ein Artikel keine Assoziation mit einem Bestellung_Detail besitzt.
+- [ ]	Jedes Bestellung_Detail, das Teil einer Bestellung ist, hat seinen eigenen Status und sein eigenes Datum.
 
 ## Klassendiagramm 2
 
@@ -736,6 +736,57 @@ Gehen Sie davon aus, dass sich das Mitglied bereits auf der Seite des gewünscht
 
 ## Aktivitätsdiagramm 1
 
-Das folgende Diagramm zeigt den Kauf eines Tickets
+Das folgende Diagramm zeigt auf, wie ein Pendler ein Ticket an einem Ticketautomaten kauft. Dieses wird nun beschrieben:
 
 ![Aktivitätsdiagramm_Ticket](Bilder/Aktivit%C3%A4tsdiagramm_Ticket.png)
+
+1. Am Prozess sind insgesamt drei Akteure beteiligt - der Commuter (Pendler), die Ticket vending machine (Fahrkartenautomat) und die Bank.
+2. Ausgehend vom Startknoten wird der Kauf mit der Aktion "Start Session" vom Pendler gestartet. 
+3. Beim Ticketautomaten werden die Reiseinfos angefordert (Request Trip Info), welche dann dem Pendler angezeigt werden (Provide Trip Info). 
+4. Der Pendler wählt die gewünschte Reise aus und teilt diese dem Automaten mit (Process Trip Info). 
+5. Der Ticketautomat verlangt nun nach einer Zahlung (Request Payment) und der Pendler gibt an, wie er die Zahlung durchführen möchte (Provide Payment Info). 
+6. Der Fahrkartenautomat fährt mit der Zahlung fort (Process Payment). 
+7. Nun steht der Ticketautomat vor einer Entscheidung - je nachdem, was für eine Zahlungsmethode der Pendler angegeben hat, verhält sich der Automat nun unterschiedlich. 
+8. Zahlt der Pendler in Bar, wird das Geld entgegen genommen und das Ticket wird das Ticket vorbereitet (Dispense Ticket). 
+9. Hat sich der Pendler für Kartenzahlung entschieden, wird die Kartenzahlung zunächst von der Bank autorisiert (Authorize Card Payment). 
+10. Wird die Zahlung authorisiert, werden die Flusslinien wieder zusammengeführt und das Ticket wird vorbereitet. 
+11. Das Ticket wird nun an den Pendler übergeben und dieser nimmt das Ticket aus dem Automaten (Get Ticket). 
+12. Nun wird die Flusslinie wieder geteilt - eine erneute Entscheidung steht an: Hat der Pendler in Bar gezahlt, erhält er Wechselgeld, falls der Betrag nicht genau beglichen wurde. 
+13. Der Ticketautomat bereitet das Wechselgeld vor (Dispense Change) und übergibt es dem Pendler, welcher es aus dem Automaten entnimmt (Get Change). 
+14. Zuletzt bedankt und verabschiedet sich der Automat über eine Automatische Nachricht (Show Thank You) und der Vorgang ist beendet. 
+15. Hat der Pendler mit Karte bezahlt, wird nach Übergabe des Tickets sofort die Verabschiedung angezeigt und der Vorgang ist beendet. 
+
+## Aktivitätsdiagramm 2
+
+Ein Fluggast ist am Flughafen angekommen. Zur Überprüfung seines Tickets begibt er sich zum Schalterseiner Fluggesellschaft. Falls das Ticket in Ordnung ist, übergibt er am Schalter sein Gepäck. Falls mit dem Ticket etwas nicht stimmt, muss der Fluggast den Kundendienst konsultieren und er kann nichtmitfliegen. Das Gepäck wird zudem auf Übergewicht überprüft. Falls dem so ist, muss der Fluggast zusätzliche Kostenübernehmen. Falls aber das Gewicht in Ordnung ist, wird die Bordkarte ausgestellt.
+
+![Aktivitätsdiagramm_Flughafen](out/Aktivit%C3%A4tsdiagramm_Flughafen/aktivit%C3%A4tsdiagramm_flughafen.png)
+
+## Zustandsdiagramm 1
+
+![Zustandsdiagramm_Bank](Bilder/Zustandsdiagramm_Bank.png)
+
+- Zu Beginn ist der ATM ausgeschaltet und befindet sich im Zustand "Off". Sobald der ATM eingeschaltet wird, startet der Selbsttest und wechselt in den Zustand "SelfTest". Wenn der Selbsttest erfolgreich ist, geht der ATM in den Zustand "Idle" über und wartet auf die Eingabe einer Karte.
+
+- Wenn eine Karte eingelegt wird, wechselt der ATM in den verschachtelten Zustand "ServiceCustomer" und fordert den Benutzer zur Eingabe seiner PIN auf. Wenn die PIN korrekt ist, geht der ATM in den Zustand "SelectingTransaction" über, in dem der Benutzer aufgefordert wird, einen Betrag auszuwählen.
+
+- Nachdem der Kunde eine Transaktion gewählt hat, wird diese durchgeführt. Wenn die Transaktion abgeschlossen ist, geht der ATM wieder in den Zustand "Idle" über und wartet auf weitere Transaktionen.
+
+- Wenn während der Transaktion ein Fehler auftritt, kann der ATM in den Zustand "OutOfService" (nicht verfügbar) übergehen und muss gewartet werden. Wenn der Kunde die Transaktion abbricht, wechselt der ATM wieder in den Zustand "Idle" und wartet auf eine neue Transaktion.
+
+- Von den Zuständen "Idle" und "OutOfService" kann jeweils über einen Service auf die Wartung "Maintenance" zugegriffen werden. Sind die Wartungsarbeiten erfolgreich, wechselt der ATM wieder in den Zustand "Self Test" - sind diese nicht erfolgreich, ist der ATM "OutOfService" und er wird ausgeschaltet.
+
+## Zustandsdiagramm 2
+
+Entwerfen Sie ein Zustandsdiagramm für eine Bestellung auf Amazon. Modellieren Sie dazu die Zustände und die Übergänge einer Bestellung vom Aufgeben der Bestellung bis hin zur Aushändigung des Paketes an den Kunden. 
+
+![Zustandsdiagramm_Amazon](out/Zustandsdiagramm_Amazon/Zustandsdiagramm_Amazon.png)
+
+Rel(user, plugins, "Uses", "HTTPS")
+Rel(user, core, "Uses", "HTTPS")
+Rel(user, bootstrap, "Uses", "HTTPS")
+
+Rel(webserver, wordpress, "Hostet")
+
+Rel(webserver, host, "Gehostet von")
+Rel(database, host, "Gehostet von")

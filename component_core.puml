@@ -1,0 +1,32 @@
+@startuml startITeasy_C4ComponentCore
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+' uncomment the following line and comment the first to use locally
+' !include C4_Container.puml
+!include FONTAWESOME/server.puml
+!include DEVICONS/database.puml
+!include FONTAWESOME/server.puml
+!include DEVICONS/bootstrap.puml
+!include DEVICONS/wordpress.puml
+
+title startITeasy C4Component-Diagram
+
+Container(webserver, "Web Server", "HTTP Server", "Hostet die Lernwebsite", "server")
+ContainerDb(database, "Datenbank", "MySQL", "Speichert die Inhalte der Website sowie die Informationen der User", "database")
+
+Container_Boundary(wordpress, "WordPress Kernfunktionen") {
+    
+    Component(posts, "Beiträge", "WordPress Kern", "Einfache Lern-Beiträge können erstellt und angezeigt werden", "wordpress")
+    Component(wiki, "Wiki", "WordPress Funktion", "Beiträge können einfach aufgelistet und durchsucht werden", "wordpress")
+    
+    Rel(posts, database, "Reads from and writes to")
+
+    Rel(wiki, database, "Reads from and writes to")
+    
+
+    Rel(webserver, wordpress, "Hostet")
+    
+}
+
+@enduml
