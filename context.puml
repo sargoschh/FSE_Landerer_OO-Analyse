@@ -1,4 +1,4 @@
-@startuml startITeasy_C4Context
+@startuml GrowManager_C4Context
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
 title GrowManager C4Context-Diagramm

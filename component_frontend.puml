@@ -1,4 +1,4 @@
-@startuml startITeasy_C4ComponentPlugins
+@startuml GrowManager_C4ComponentFrontend
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 !define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
 !define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
@@ -8,31 +8,21 @@
 !include DEVICONS/database.puml
 !include FONTAWESOME/server.puml
 !include DEVICONS/bootstrap.puml
-!include DEVICONS/wordpress.puml
+!include DEVICONS/html5.puml
 
-title startITeasy C4Component-Diagram
+title GrowManager C4Component-Diagram
 
-Container(webserver, "Web Server", "HTTP Server", "Hostet die Lernwebsite", "server")
-ContainerDb(database, "Datenbank", "MySQL", "Speichert die Inhalte der Website sowie die Informationen der User", "database")
+Container(webserver, "Apache Web Server", "HTTP Server", "Hostet den GrowManager", "server")
 
-Container_Boundary(growmanager, "GrowManager Backend") {
+Container_Boundary(growmanager, "GrowManager Thymeleaf Frontend") {
     
-    Component(controller, "Controller", "SpringBoot Web-Framework", "Stellt Funktionen für Kommunikation (Thymeleaf) zwischen Backend und Webserver bereit")
-    Component(repository, "Repository", "Kommunikation", "Stellt Funktionen für Kommunikation (JPA) zwischen Backend und Datenbank bereit")
-    Component(service, "Service", "Business-Logik", "Ist für die Business-Logik des Systems veratwortlich")
-    Component(domain, "Domain", "Entity-Klassen", "Entitys und deren Beziehungen untereinander werden darin definiert")
-    Component(exceptions, "Exceptions", "Exceptions", "Spezifische Fehlermeldungen können mithilfe der Exceptions ausgegeben werden")
-
-    Rel(domain, repository, "provides functions")
-    Rel(domain, service, "provides functions")
-    Rel(domain, controller, "provides functions")
-    Rel(exceptions, repository, "provides functions")
-    Rel(exceptions, service, "provides functions")
-    Rel(exceptions, controller, "provides functions")
+    Component(templates, "Templates", "HTML-Files", "Definieren den Aufbau der Website - Thymeleaf-Komponenten können auf Backend zugreifen", "html5")
+    Component(css, "CSS - Bootstrap", "Frontend-CSS-Framework", "Sorgt für Look and Feel der Anwendung", "bootstrap")
     
-    Rel(repository, database, "JPA", "Speichert und liest Daten aus/auf Datenbank")
-    Rel(webserver, controller, "HTTP", "Verarbeitet Anfragen und antwortet mit Daten")
-
+    Rel(templates, css, "verwendet")
+    Rel(webserver, growmanager, "Hostet")
+    
+    
 }
 
 @enduml
