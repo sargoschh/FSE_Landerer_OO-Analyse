@@ -17,9 +17,9 @@ title GrowManager C4Container-Diagramm
 SHOW_PERSON_OUTLINE()
 Person(user, User, "Angemeldeter Benutzer")
 
-System_Boundary(wordpress, "WordPress Website") {
-    Container(backend, "Backend", "SpringBoot Application", "Stellt Funktionen für Kommunikation (Thymeleaf) zwischen Backend und Webserver bereit")
-    Container(frontend, "Thymeleaf-Frontend", "Java-Template-Engine", "Stellt Funktionen für Kommunikation (JPA) zwischen Backend und Datenbank bereit")
+System_Boundary(growmanager, "GrowManager ") {
+    Container(backend, "Backend", "SpringBoot Application", "Business-Logik, Datenbankverbindung, Web-Controller, Exceptions, Domain-Klassen")
+    Container(frontend, "Thymeleaf-Frontend", "Java-Template-Engine", "Auf Basis von HTML-Code wird das Frontend erstellt - Kommunikation mit Backend über Thymeleaf")
     }
 
 Container(webserver, "Apache Web Server", "HTTP Server", "Hostet den GrowManager", "server")
@@ -27,20 +27,14 @@ ContainerDb(database, "Datenbank", "MySQL", "Speichert die Inhalte der Website s
 
 System_Ext(host, "XAMPP", "Stellt im Probebetrieb Serverressourcen und Datenbank bereit")
 
-Rel(user, wordpress, "Uses", "HTTPS")
-
-Rel(domain, webserver1, "Uses", "HTTPS")
-Rel(domain, database1, "Uses", "HTTPS")
-Rel(domain, service, "Uses", "HTTPS")
-
-Rel(exceptions, webserver1, "Uses", "HTTPS")
-Rel(exceptions, database1, "Uses", "HTTPS")
-Rel(exceptions, service, "Uses", "HTTPS")
-
-Rel(webserver, wordpress, "Hostet")
+Rel(frontend, webserver, "HTTP", "Liefert Web-Seiten an Benutzer aus")
+Rel(webserver, backend, "HTTP", "Verarbeitet Anfragen und antwortet mit Daten")
+Rel(backend, database, "JPA", "Speichert und liest Daten aus/auf Datenbank")
 
 Rel(webserver, host, "Gehostet von")
 Rel(database, host, "Gehostet von")
+
+Rel(user, growmanager, "HTTP", "verwendet")
 
 
 @enduml
